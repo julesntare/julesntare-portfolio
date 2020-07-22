@@ -320,9 +320,11 @@ footer {
 }
 .upper-footer {
 	width: 100%;
-	height: 300px;
+	min-height: 300px;
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 10px 0;
 }
 .upper-footer > div {
 	display: flex;
@@ -331,7 +333,7 @@ footer {
 	align-items: center;
 }
 .upper-footer .left-side {
-	width: 60%;
+	width: 700px;
 }
 .upper-footer .left-side div {
 	width: 400px;
@@ -351,7 +353,7 @@ footer {
 	font-size: 24px;
 }
 .upper-footer .right-side {
-	width: 40%;
+	width: 400px;
 	align-items: flex-start;
 }
 .upper-footer .right-side ul {
