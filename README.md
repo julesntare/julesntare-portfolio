@@ -1,1 +1,1 @@
-# this branch contains my landing page files
+# this branch contains my contact page files

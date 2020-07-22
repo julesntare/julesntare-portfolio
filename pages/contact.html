@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Jules NTARE</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
@@ -27,28 +27,40 @@
         </div>
     </header>
     <section>
-        <div class="overlay">
-            <div class="overlay-contents-box">
-                <div class="overlay-box1">
-                    <h3>Hi, I'm Jules NTARE</h3>
-                    <p>
-                        A Full-stack web developer from kigali, RWANDA. I develop different type of web applications in
-                        order to help businesses automate their activities.</p>
-                    <ul class="social-links">
-                        <li><img src="./assets/images/social-icons/fb.jpg" alt=""></li>
-                        <li><img src="./assets/images/social-icons/twitter.png" alt=""></li>
-                        <li><img src="./assets/images/social-icons/email.jpg" alt=""></li>
-                        <li><img src="./assets/images/social-icons/instagram.jpg" alt=""></li>
-                        <li><img src="./assets/images/social-icons/whatsapp.jpg" alt=""></li>
-                    </ul>
+        <div class="contact-overlay-bg">
+            <div class="overlay-contents">
+                <div>
+                    <h1>Contact Me</h1>
                 </div>
-                <div class="overlay-box2">
-                    <button>Let's work</button>
-                </div>
-                <div class="overlay-box3">
-                    <img src="./assets/images/profile.jpg" alt="">
+                <div>
+                    <p>You can reach me via contacting by fulfilling below form or via my social platforms also
+                        mentioned
+                        below.
+                        I will reply you within few minutes.
+                    </p>
                 </div>
             </div>
+        </div>
+        <div class="contact-container">
+            <form action="#">
+                <div class="form-group form-group-1">
+                    <div class="input1">
+                        <label for="">Name</label>
+                        <input type="text" name="name" placeholder="" autocomplete="off">
+                    </div>
+                    <div class="input2">
+                        <label for="">Email</label>
+                        <input type="text" name="email" placeholder="" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group form-group-2">
+                    <label for="">Message</label>
+                    <textarea name="msg" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group form-group-3 view-more">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
         </div>
     </section>
     <footer>
@@ -64,19 +76,19 @@
             </div>
             <div class="right-side">
                 <ul class="social-links">
-                    <li><img src="./assets/images/social-icons/fb.jpg" alt=""> <span>julesntare</span></li>
-                    <li><img src="./assets/images/social-icons/twitter.png" alt=""> <span>@julesntare</span></li>
-                    <li><img src="./assets/images/social-icons/email.jpg" alt=""> <span>julesntare</span></li>
-                    <li><img src="./assets/images/social-icons/instagram.jpg" alt=""> <span>julesntare@gmail.com</span>
+                    <li><img src="../assets/images/social-icons/fb.jpg" alt=""> <span>julesntare</span></li>
+                    <li><img src="../assets/images/social-icons/twitter.png" alt=""> <span>@julesntare</span></li>
+                    <li><img src="../assets/images/social-icons/email.jpg" alt=""> <span>julesntare</span></li>
+                    <li><img src="../assets/images/social-icons/instagram.jpg" alt=""> <span>julesntare@gmail.com</span>
                     </li>
-                    <li><img src="./assets/images/social-icons/whatsapp.jpg" alt=""> <span>+250 780 674 459</span></li>
+                    <li><img src="../assets/images/social-icons/whatsapp.jpg" alt=""> <span>+250 780 674 459</span></li>
                 </ul>
             </div>
         </div>
-        <div class="lower-footer">&copy 2020 made with <div><img src="./assets/images/made-love.png" alt=""></div> by
+        <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
-    <script src="scripts/scripts.js"></script>
+    <script src="../scripts/scripts.js"></script>
 </body>
 
 </html>
