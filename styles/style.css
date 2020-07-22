@@ -152,6 +152,37 @@ button {
 	height: 300px;
 	border-radius: 50%;
 }
+.overlay-contents {
+	width: 100%;
+	color: #000;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.overlay-contents div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.overlay-contents div:nth-child(1) {
+	flex: 2;
+	align-items: center;
+}
+.overlay-contents div:nth-child(2) {
+	width: 50%;
+	flex: 3;
+	margin: 0 auto;
+	text-align: center;
+}
+.overlay-contents h1 {
+	font-size: 4em;
+}
+.overlay-contents p {
+	line-height: 30px;
+	font-size: 1.15em;
+	font-weight: 600;
+}
 
 /* section featured projects styles */
 .sections {
@@ -164,6 +195,15 @@ button {
 .sections h2,
 .sections hr {
 	margin-bottom: 5px;
+}
+
+section .contact-overlay-bg {
+	background: url('../assets/images/blog-overlay-bg.png');
+	background-size: 100% 100%;
+	width: 100%;
+	height: 430px;
+	display: flex;
+	justify-content: flex-end;
 }
 .project-container {
 	display: flex;
