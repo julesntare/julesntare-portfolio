@@ -7,6 +7,9 @@
 body {
 	background-color: #0e172d;
 }
+a {
+	text-decoration: none;
+}
 
 /* header styles */
 header {
@@ -34,7 +37,6 @@ header .at-bottom {
 .brand-name a {
 	width: fit-content;
 	height: fit-content;
-	text-decoration: none;
 	color: #fff;
 }
 .brand-name h1 {
@@ -66,10 +68,26 @@ nav ul li {
 	opacity: 0.7;
 }
 nav ul li a {
-	text-decoration: none;
 	color: inherit;
 	font-size: 18px;
 	letter-spacing: 0.125em;
+}
+.login-link {
+	color: #fff;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: #fff;
+	border: 3px solid #a1a4ad;
+	padding: 5px 15px;
+	margin-right: 10px;
+}
+.active {
+	opacity: 1;
 }
 
 /* section overlay styles */
@@ -435,4 +453,10 @@ footer {
 }
 .lower-footer div img {
 	width: 100%;
+}
+.blog-buttons {
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
 }
