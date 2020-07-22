@@ -31,6 +31,12 @@ header .at-bottom {
 	justify-content: flex-end;
 	flex-wrap: wrap;
 }
+.brand-name a {
+	width: fit-content;
+	height: fit-content;
+	text-decoration: none;
+	color: #fff;
+}
 .brand-name h1 {
 	font-size: 36px;
 	text-transform: uppercase;
