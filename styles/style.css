@@ -661,7 +661,7 @@ textarea {
 .form-contents > div {
 	width: 100%;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: flex-end;
 }
 .signup-contents {
 	min-height: 290px;
@@ -698,6 +698,7 @@ textarea {
 }
 .bottom-text {
 	align-items: center;
+	justify-content: center !important;
 }
 .bottom-text a {
 	color: #182952;
