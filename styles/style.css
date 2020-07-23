@@ -4,6 +4,9 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
+html {
+	font-size: 100%;
+}
 body {
 	background-color: #0e172d;
 }
@@ -14,7 +17,7 @@ a {
 /* header styles */
 header {
 	width: 100%;
-	min-height: 122px;
+	min-height: 100px;
 	color: #fff;
 	text-transform: capitalize;
 	display: flex;
@@ -23,7 +26,7 @@ header {
 }
 header .at-bottom {
 	width: 90%;
-	height: 115px;
+	height: inherit;
 	margin-bottom: 20px;
 	display: flex;
 }
@@ -31,7 +34,7 @@ header .at-bottom {
 	width: 30%;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 .brand-name a {
