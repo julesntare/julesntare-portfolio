@@ -568,7 +568,7 @@ textarea {
 
 /* login styles */
 .login-container {
-	width: 60%;
+	width: 50%;
 	height: 60vh;
 	margin: 33px auto;
 	background: linear-gradient(180deg, #182952 39.06%, rgba(59, 110, 233, 0) 100%);
@@ -576,12 +576,12 @@ textarea {
 	display: flex;
 }
 .login-container > div {
+	width: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .first-side {
-	width: 55%;
 	height: 100%;
 }
 .content-center {
@@ -613,7 +613,6 @@ textarea {
 	color: #fffcfc;
 }
 .second-side {
-	width: 45%;
 	height: 100%;
 	background: #fff;
 }
@@ -638,18 +637,18 @@ textarea {
 	-webkit-background-clip: text;
 }
 .form-contents {
-	width: 80%;
+	width: 90%;
 	min-height: 260px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-around;
 }
 .form-contents > div {
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 }
 .signup-contents {
 	min-height: 290px;
@@ -657,6 +656,7 @@ textarea {
 }
 .input-box {
 	width: 100px;
+	margin-bottom: 5px;
 }
 .input-box > input:not(.remember-box) {
 	width: 100%;
@@ -664,13 +664,14 @@ textarea {
 	border: none;
 	border-bottom: 1px solid #9a8d8d;
 	transform: matrix(1, 0, 0, 1, 0, 0);
-	padding-left: 40px;
-	font-size: 16px;
+	padding-left: 30px;
+	font-size: 15px;
 }
 .input-box > i {
 	position: relative;
-	left: 25px;
+	left: 22px;
 	z-index: 99;
+	font-size: 20px;
 }
 .send-button {
 	margin-top: 0;
@@ -678,10 +679,6 @@ textarea {
 .send-button button {
 	width: 100%;
 	height: 35px;
-}
-.input-box:nth-child(4) {
-	justify-content: flex-end;
-	align-items: center;
 }
 .input-box:nth-child(4) span {
 	padding-left: 5px;
@@ -698,23 +695,6 @@ textarea {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-.sub-input-box {
-	width: 33%;
-}
-.sub-input-box input {
-	width: 120px;
-	outline: none;
-	border: none;
-	border-bottom: 1px solid #9a8d8d;
-	transform: matrix(1, 0, 0, 1, 0, 0);
-	padding-left: 5px;
-	font-size: 16px;
-}
-.sub-input-box > i {
-	position: relative;
-	bottom: 5px;
-	z-index: 99;
 }
 .input-box:nth-child(2),
 .input-box:nth-child(4) {
