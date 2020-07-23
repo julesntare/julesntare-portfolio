@@ -721,6 +721,6 @@ textarea {
 	z-index: 99;
 }
 .input-box:nth-child(2),
-.input-box:nth-child(4) {
+.input-box:nth-child(4):not(.input-check) {
 	justify-content: space-around;
 }
