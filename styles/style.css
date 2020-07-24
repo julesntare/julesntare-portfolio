@@ -233,6 +233,11 @@ button {
 	outline: none;
 	cursor: pointer;
 }
+button:hover {
+	color: #0e172d;
+	border: 2px solid #0e172d;
+	background: none;
+}
 .overlay-box2 button {
 	width: 150px;
 	height: 50px;
@@ -489,6 +494,11 @@ footer {
 	width: 200px;
 	height: 50px;
 	font-size: 24px;
+}
+.upper-footer .left-side button:hover {
+	color: #fff;
+	border: 2px solid #fff;
+	background: none;
 }
 .upper-footer .right-side {
 	width: 400px;
