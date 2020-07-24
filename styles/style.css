@@ -367,6 +367,7 @@ section .contact-overlay-bg {
 .subtitle {
 	color: #706f6f;
 	justify-self: flex-start;
+	height: 50px;
 }
 .view-more {
 	width: 100%;
@@ -388,7 +389,7 @@ section .contact-overlay-bg {
 .blog-container > div {
 	background: rgba(68, 68, 68, 0.14);
 	width: 520px;
-	min-height: 400px;
+	min-height: 480px;
 	display: flex;
 	flex-direction: column;
 	margin-top: 30px;
@@ -401,9 +402,10 @@ section .contact-overlay-bg {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex: 1;
 }
 .blog-posts > div:last-child {
+	flex: 1;
+	align-items: flex-start;
 	margin: 0 25px;
 	line-height: 20px;
 	font-size: 18px;
