@@ -2,4 +2,4 @@
 
 ## below is the link to my live site
 
-[a link](https://julesntare.netlify.app/)
+[https://julesntare.netlify.app/](https://julesntare.netlify.app/)
