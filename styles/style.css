@@ -708,6 +708,7 @@ textarea {
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 }
 .signup-contents {
 	min-height: 290px;
