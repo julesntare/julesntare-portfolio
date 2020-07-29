@@ -486,14 +486,27 @@ section .contact-overlay-bg {
 	color: #000;
 }
 .blog-container .replies-section {
-	min-height: 100%;
+	min-height: 280px;
 	border: 1px solid rgba(0, 0, 0, 0.14);
 }
-.blog-container .replies-section div > * {
+.blog-container .replies-section span {
+	font-style: italic;
+}
+.blog-container .replies-section div:nth-child(1) > * {
 	padding: 15px 0 0 15px;
 }
 .blog-container .replies-section div:nth-child(1) {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+.blog-container .replies-section .view-more {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+.blog-container .replies-section .view-more button {
+	align-self: flex-end;
+	width: 180px;
+	margin-right: 20px;
 }
 
 /* lower footer styles */
