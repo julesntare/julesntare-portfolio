@@ -446,6 +446,7 @@ section .contact-overlay-bg {
 }
 .blog-posts > div:last-child {
 	flex: 1;
+	flex-direction: column;
 	align-items: flex-start;
 	margin: 0 25px;
 	line-height: 20px;
@@ -461,6 +462,38 @@ section .contact-overlay-bg {
 }
 .subtitle span {
 	color: #0e172d;
+}
+.blog-container .post-container {
+	width: 90%;
+	min-height: 100%;
+	margin: 0 auto;
+}
+.blog-container .post-container img {
+	height: 400px;
+}
+.blog-container .post-container p {
+	font-size: 22px;
+	line-height: 30px;
+	margin-bottom: 30px;
+}
+.blog-container .comment-section,
+.blog-container .replies-section {
+	background: none;
+	margin-top: 30px;
+}
+.blog-container .comment-section textarea {
+	border: 1px solid #000;
+	color: #000;
+}
+.blog-container .replies-section {
+	min-height: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.14);
+}
+.blog-container .replies-section div > * {
+	padding: 15px 0 0 15px;
+}
+.blog-container .replies-section div:nth-child(1) {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.14);
 }
 
 /* lower footer styles */
@@ -558,6 +591,7 @@ footer {
 	justify-content: space-around;
 	margin: 0 auto;
 }
+
 /* contact page styles */
 .contact-container {
 	width: 100%;
