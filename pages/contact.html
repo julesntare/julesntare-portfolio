@@ -51,20 +51,21 @@
             </div>
         </div>
         <div class="contact-container">
-            <form action="#">
+            <form id="contactForm">
+                <div class="success-msg">Thank you for reaching out to me</div>
                 <div class="form-group form-group-1">
                     <div class="input1">
                         <label for="">Name</label>
-                        <input type="text" name="name" placeholder="" autocomplete="off">
+                        <input type="text" name="name" id="name" placeholder="" autocomplete="off">
                     </div>
                     <div class="input2">
                         <label for="">Email</label>
-                        <input type="text" name="email" placeholder="" autocomplete="off">
+                        <input type="email" name="email" id="email" placeholder="" autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group form-group-2">
                     <label for="">Message</label>
-                    <textarea name="msg" id="" cols="30" rows="10"></textarea>
+                    <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
                 </div>
                 <div class="form-group form-group-3 view-more">
                     <button type="submit">Send</button>
@@ -106,6 +107,7 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
