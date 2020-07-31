@@ -7,6 +7,9 @@
 body {
 	background-color: #0e172d;
 }
+a {
+	text-decoration: none;
+}
 
 /* header styles */
 header {
@@ -30,6 +33,11 @@ header .at-bottom {
 	flex-direction: column;
 	justify-content: flex-end;
 	flex-wrap: wrap;
+}
+.brand-name a {
+	width: fit-content;
+	height: fit-content;
+	color: #fff;
 }
 .brand-name h1 {
 	font-size: 36px;
@@ -60,10 +68,26 @@ nav ul li {
 	opacity: 0.7;
 }
 nav ul li a {
-	text-decoration: none;
 	color: inherit;
 	font-size: 18px;
 	letter-spacing: 0.125em;
+}
+.login-link {
+	color: #fff;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: #fff;
+	border: 3px solid #a1a4ad;
+	padding: 5px 15px;
+	margin-right: 10px;
+}
+.active {
+	opacity: 1;
 }
 
 /* section overlay styles */
@@ -196,6 +220,37 @@ button {
 	height: 300px;
 	border-radius: 50%;
 }
+.overlay-contents {
+	width: 100%;
+	color: #000;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.overlay-contents div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.overlay-contents div:nth-child(1) {
+	flex: 2;
+	align-items: center;
+}
+.overlay-contents div:nth-child(2) {
+	width: 50%;
+	flex: 3;
+	margin: 0 auto;
+	text-align: center;
+}
+.overlay-contents h1 {
+	font-size: 4em;
+}
+.overlay-contents p {
+	line-height: 30px;
+	font-size: 1.15em;
+	font-weight: 600;
+}
 
 /* section featured projects styles */
 .sections {
@@ -208,6 +263,15 @@ button {
 .sections h2,
 .sections hr {
 	margin-bottom: 5px;
+}
+
+section .contact-overlay-bg {
+	background: url('../assets/images/blog-overlay-bg.png');
+	background-size: 100% 100%;
+	width: 100%;
+	height: 430px;
+	display: flex;
+	justify-content: flex-end;
 }
 .project-container {
 	display: flex;
@@ -434,7 +498,12 @@ footer {
 .lower-footer div img {
 	width: 100%;
 }
-
+.blog-buttons {
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+}
 /* contact page styles */
 .contact-container {
 	width: 100%;
@@ -510,4 +579,159 @@ textarea {
 	background-color: rgba(83, 143, 77, 0.8);
 	border: 2px solid #111;
 	border-radius: 16px;
+}
+
+/* login styles */
+.login-container {
+	width: 60%;
+	height: 60vh;
+	margin: 33px auto;
+	background: linear-gradient(180deg, #182952 39.06%, rgba(59, 110, 233, 0) 100%);
+	box-shadow: 0px 0px 10px #172854;
+	display: flex;
+}
+.login-container > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.first-side {
+	width: 55%;
+	height: 100%;
+}
+.content-center {
+	width: 85%;
+	height: 30vh;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.content-center div {
+	height: calc(30vh / 3);
+}
+.content-center div:nth-child(1) {
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 5px;
+}
+.content-center div:nth-child(1) p {
+	font-weight: 500;
+	font-size: 21px;
+	color: rgba(255, 255, 255, 0.5);
+}
+.content-center h1 {
+	letter-spacing: 0.11em;
+}
+.content-center div:nth-child(2) p {
+	letter-spacing: 0.11em;
+	color: #fffcfc;
+}
+.second-side {
+	width: 45%;
+	height: 100%;
+	background: #fff;
+}
+.form-container {
+	width: 100%;
+	min-height: 50vh;
+}
+.login-text {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+}
+.login-text p {
+	font-family: 'Agency FB' sans-serif;
+	font-weight: bold;
+	font-size: 28px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 41, 82, 1) 35%, rgba(0, 212, 255, 1) 100%);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+.form-contents {
+	width: 80%;
+	min-height: 260px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+.form-contents > div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.signup-contents {
+	min-height: 290px;
+	justify-content: space-between;
+}
+.input-box {
+	width: 100px;
+}
+.input-box > input:not(.remember-box) {
+	width: 100%;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #9a8d8d;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	padding-left: 40px;
+	font-size: 16px;
+}
+.input-box > i {
+	position: relative;
+	left: 25px;
+	z-index: 99;
+}
+.send-button {
+	margin-top: 0;
+}
+.send-button button {
+	width: 100%;
+	height: 35px;
+}
+.input-box:nth-child(4) {
+	justify-content: flex-end;
+	align-items: center;
+}
+.input-box:nth-child(4) span {
+	padding-left: 5px;
+}
+.bottom-text {
+	align-items: center;
+}
+.bottom-text a {
+	color: #182952;
+	font-size: 20px;
+	padding-left: 5px;
+}
+.input-box > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.sub-input-box {
+	width: 33%;
+}
+.sub-input-box input {
+	width: 120px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #9a8d8d;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	padding-left: 5px;
+	font-size: 16px;
+}
+.sub-input-box > i {
+	position: relative;
+	bottom: 5px;
+	z-index: 99;
+}
+.input-box:nth-child(2),
+.input-box:nth-child(4) {
+	justify-content: space-around;
 }
