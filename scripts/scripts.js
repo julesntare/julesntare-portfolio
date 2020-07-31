@@ -26,7 +26,7 @@ function submitForm(e) {
 	document.querySelector('.success-msg').style.display = 'flex';
 	setTimeout(() => {
 		document.querySelector('.success-msg').style.display = 'none';
-	}, 3000);
+	}, 3500);
 	document.querySelector('#contactForm').reset();
 }
 
