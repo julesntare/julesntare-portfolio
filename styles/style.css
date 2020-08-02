@@ -149,6 +149,22 @@ section .contact-overlay-bg {
 	display: flex;
 	justify-content: flex-end;
 }
+section .about-bg {
+	background: url('../assets/images/overlay-about-bg.png');
+	background-size: 100% 100%;
+}
+section .blog-bg {
+	background: url('../assets/images/overlay-blog-bg.png');
+	background-size: 100% 100%;
+}
+section .service-bg {
+	background: url('../assets/images/overlay-service-bg.png');
+	background-size: 100% 100%;
+}
+section .project-bg {
+	background: url('../assets/images/overlay-project-bg.png');
+	background-size: 100% 100%;
+}
 .overlay-contents-box {
 	width: 80%;
 	min-height: 100%;
@@ -303,15 +319,6 @@ button:hover {
 .sections h2,
 .sections hr {
 	margin-bottom: 5px;
-}
-
-section .contact-overlay-bg {
-	background: url('../assets/images/blog-overlay-bg.png');
-	background-size: 100% 100%;
-	width: 100%;
-	height: 350px;
-	display: flex;
-	justify-content: flex-end;
 }
 .project-container {
 	display: flex;
