@@ -25,8 +25,8 @@ function getInputVal(id) {
 
 // save message to firebase
 function saveMessage(fname, lname, email, pswd) {
-	let newMsgRef = messagesRef.push();
-	newMsgRef.set({
+	let newUserRef = usersRef.push();
+	newUserRef.set({
 		firstname: fname,
 		lastname: lname,
 		email: email,
