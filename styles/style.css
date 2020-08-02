@@ -434,7 +434,31 @@ section .contact-overlay-bg {
 	height: 50px;
 	font-size: 20px;
 }
-
+.service-container-expanded {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 100px;
+}
+.service-container-expanded > div {
+	display: flex;
+}
+.service-container-expanded:nth-child(even) {
+	flex-direction: row-reverse;
+}
+.service-container-expanded > div:nth-child(1) {
+	width: 30%;
+}
+.service-container-expanded > div:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 60%;
+}
+.service-container-expanded img {
+	width: 250px;
+	height: 200px;
+}
 /* section my blog styles */
 .blog-container {
 	display: flex;
@@ -944,5 +968,24 @@ textarea {
 	}
 	.overlay-contents div:nth-child(2) {
 		width: 80%;
+	}
+	.service-container-expanded {
+		flex-direction: column;
+	}
+	.service-container-expanded * {
+		margin-bottom: 20px;
+	}
+	.service-container-expanded:nth-child(even) {
+		flex-direction: column;
+	}
+	.service-container-expanded > div:nth-child(1),
+	.service-container-expanded > div:nth-child(2) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	.service-container-expanded > div * {
+		text-align: center;
 	}
 }
