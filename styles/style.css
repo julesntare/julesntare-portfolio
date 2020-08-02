@@ -548,6 +548,17 @@ section .contact-overlay-bg {
 	margin-right: 20px;
 }
 
+/* section about me styles */
+.about-container * {
+	text-align: center;
+}
+.about-container p {
+	margin-bottom: 10px;
+}
+.about-container h1 {
+	margin: 25px 0;
+}
+
 /* lower footer styles */
 footer {
 	width: 100%;
