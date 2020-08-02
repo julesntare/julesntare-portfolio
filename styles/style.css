@@ -358,6 +358,21 @@ section .contact-overlay-bg {
 	height: 40px;
 	font-size: 20px;
 }
+.marg-bottom {
+	margin-bottom: 200px;
+}
+.mg-bt-btn button {
+	margin-left: 20px;
+}
+.project-details div.tech-container {
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+}
+.tech-container img {
+	width: 55px;
+	height: 45px;
+}
 
 /* section my services styles */
 .services-container {
