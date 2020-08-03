@@ -1,6 +1,3 @@
-// reference users collection
-let usersRef = firebase.database().ref('users');
-
 // listen for signup form submission
 document.querySelector('#signUpForm').addEventListener('submit', submitForm);
 function submitForm(e) {
@@ -11,11 +8,6 @@ function submitForm(e) {
 	let email = getInputVal('email');
 	let pswd = getInputVal('password');
 	saveMessage(fName, lName, email, pswd);
-	document.querySelector('.success-msg').style.display = 'flex';
-	setTimeout(() => {
-		document.querySelector('.success-msg').style.display = 'none';
-	}, 3500);
-	document.querySelector('#signUpForm').reset();
 }
 
 // function to get ids of inputs
@@ -25,11 +17,21 @@ function getInputVal(id) {
 
 // save message to firebase
 function saveMessage(fname, lname, email, pswd) {
-	let newUserRef = usersRef.push();
-	newUserRef.set({
-		firstname: fname,
-		lastname: lname,
-		email: email,
-		password: pswd,
-	});
+	db.collection('users')
+		.add({
+			firstname: fname,
+			lastname: lname,
+			email: email,
+			password: pswd,
+		})
+		.then(function (docRef) {
+			document.querySelector('.success-msg').style.display = 'flex';
+			setTimeout(() => {
+				document.querySelector('.success-msg').style.display = 'none';
+			}, 3500);
+			document.querySelector('#signUpForm').reset();
+		})
+		.catch(function (error) {
+			console.error('Error adding document: ', error);
+		});
 }
