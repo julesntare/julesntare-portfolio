@@ -1,6 +1,3 @@
-// reference messages collection
-let messagesRef = firebase.database().ref('messages');
-
 // listen for contact form submission
 document.querySelector('#contactForm').addEventListener('submit', submitForm);
 function submitForm(e) {
@@ -10,11 +7,6 @@ function submitForm(e) {
 	let email = getInputVal('email');
 	let msg = getInputVal('msg');
 	saveMessage(name, email, msg);
-	document.querySelector('.success-msg').style.display = 'flex';
-	setTimeout(() => {
-		document.querySelector('.success-msg').style.display = 'none';
-	}, 3500);
-	document.querySelector('#contactForm').reset();
 }
 
 // function to get ids of inputs
@@ -24,10 +16,20 @@ function getInputVal(id) {
 
 // save message to firebase
 function saveMessage(name, email, msg) {
-	let newMsgRef = messagesRef.push();
-	newMsgRef.set({
-		name: name,
-		email: email,
-		msg: msg,
-	});
+	db.collection('messages')
+		.add({
+			name: name,
+			email: email,
+			msg: msg,
+		})
+		.then(function (docRef) {
+			document.querySelector('.success-msg').style.display = 'flex';
+			setTimeout(() => {
+				document.querySelector('.success-msg').style.display = 'none';
+			}, 3500);
+			document.querySelector('#contactForm').reset();
+		})
+		.catch(function (error) {
+			console.error('Error adding document: ', error);
+		});
 }
