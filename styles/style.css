@@ -20,6 +20,15 @@ h6 {
 }
 a {
 	text-decoration: none;
+	color: #000;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	opacity: 0.7;
 }
 
 /* header styles */
@@ -390,16 +399,15 @@ section .contact-overlay-bg {
 }
 .services > div:nth-child(2) {
 	margin-top: 15px;
+	min-height: 110px;
 }
 .services > div:not(:nth-child(1)) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex: 1;
 }
 .services > div:last-child {
-	flex: 5;
-	margin: 0 25px;
+	margin: 30px 25px;
 	line-height: 35px;
 	font-size: 20px;
 	text-align: center;
