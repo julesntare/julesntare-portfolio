@@ -1024,4 +1024,7 @@ textarea {
 	.service-container-expanded > div * {
 		text-align: center;
 	}
+	.success-msg {
+		width: 100%;
+	}
 }
