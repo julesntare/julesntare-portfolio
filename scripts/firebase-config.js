@@ -1,7 +1,7 @@
 firebase.initializeApp({
-	apiKey: 'AIzaSyASc4Oq57XNSMpZ6CgdjXT4AkmroQlX_sY',
-	authDomain: 'contactform-daf99.firebaseapp.com',
-	projectId: 'contactform-daf99',
+	apiKey: 'AIzaSyApy6r-ORip9gq8d0EmsckVXcYqlogLAF4',
+	authDomain: 'portfolio-db-d0d5c.firebaseapp.com',
+	projectId: 'portfolio-db-d0d5c',
 });
 
 var db = firebase.firestore();
