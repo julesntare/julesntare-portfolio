@@ -476,38 +476,6 @@ section .contact-overlay-bg {
 	line-height: 30px;
 	margin-bottom: 30px;
 }
-.blog-container .comment-section,
-.blog-container .replies-section {
-	background: none;
-	margin-top: 30px;
-}
-.blog-container .comment-section textarea {
-	border: 1px solid #000;
-	color: #000;
-}
-.blog-container .replies-section {
-	min-height: 280px;
-	border: 1px solid rgba(0, 0, 0, 0.14);
-}
-.blog-container .replies-section span {
-	font-style: italic;
-}
-.blog-container .replies-section div:nth-child(1) > * {
-	padding: 15px 0 0 15px;
-}
-.blog-container .replies-section div:nth-child(1) {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.14);
-}
-.blog-container .replies-section .view-more {
-	display: flex;
-	flex-direction: column;
-	margin-top: 20px;
-}
-.blog-container .replies-section .view-more button {
-	align-self: flex-end;
-	width: 180px;
-	margin-right: 20px;
-}
 
 /* lower footer styles */
 footer {
@@ -809,6 +777,186 @@ textarea {
 	justify-content: space-around;
 }
 
+/* blog post styles */
+.post-section {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	min-height: 100%;
+	margin-top: 20px;
+}
+.post-section > div:nth-child(1) {
+	width: 20%;
+	min-height: 100%;
+	margin: 10px 0 0 20px;
+	text-align: center;
+	position: relative;
+}
+.post-section > div:nth-child(1) div {
+	margin-bottom: 10px;
+}
+.author-social-icons ul {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+.author-social-icons ul li {
+	margin-right: 15px;
+}
+.author-social-icons img {
+	width: 30px;
+	height: 30px;
+}
+.author-post-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	min-height: 55px;
+}
+.author-post-details h3 {
+	text-transform: uppercase;
+}
+.author-profile img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 3px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.7);
+}
+.post-likes {
+	margin-top: 50px;
+}
+.post-likes img {
+	width: 30px;
+	height: 30px;
+}
+.post-shares {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: none;
+	transition: linear 1s ease-in-out;
+}
+.post-shares:hover {
+	background: #999;
+	cursor: pointer;
+}
+.post-shares span {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #444;
+	margin-left: 3px;
+}
+.post-share-links {
+	width: 250px;
+	min-height: 250px;
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 10px;
+	border: 3px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.7);
+}
+.post-share-links > div {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 30px;
+}
+.post-share-links > div:nth-child(1) input {
+	width: 80%;
+}
+.post-share-links > div:nth-child(1) img {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.post-share-links > div:nth-child(2) {
+	display: flex;
+	align-items: center;
+	border: 3px solid #333;
+}
+.post-section > div:nth-child(2) {
+	width: 65%;
+	margin: 0 auto;
+}
+.post-details,
+.comment-section,
+.replies-section {
+	border: 3px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+	border-radius: 3px;
+	margin-bottom: 30px;
+	background-color: #fff;
+}
+.post-details img {
+	width: 100%;
+}
+.post-paras {
+	margin: 0 50px;
+}
+.post-paras p {
+	font-size: 1.25em;
+	margin-bottom: 20px;
+}
+.comment-section {
+	min-height: 100px;
+}
+.comment-section,
+.replies-section {
+	padding: 30px 50px 20px 50px;
+}
+.comment-section .form-group {
+	width: 100%;
+}
+.comment-section textarea {
+	width: 90%;
+	height: 150px;
+	border-color: #222;
+	color: #111;
+	margin-top: 10px;
+}
+.comment-section .view-more {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 10px;
+}
+.comment-section .view-more button {
+	width: 150px;
+	height: 40px;
+}
+.replies-section > span {
+	font-style: italic;
+	font-size: 24px;
+	font-weight: bolder;
+}
+.replies-section > hr {
+	margin-bottom: 20px;
+}
+.comment-user {
+	display: flex;
+}
+.comment-user img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.replies-section .view-more {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-top: 10px;
+}
+.replies-section .view-more a {
+	color: #0c1838;
+	font-weight: bolder;
+}
+
 /* media queries */
 @media (max-width: 740px) {
 	header .at-bottom {
@@ -918,5 +1066,11 @@ textarea {
 	}
 	.overlay-contents div:nth-child(2) {
 		width: 80%;
+	}
+	.post-section > div:nth-child(1) {
+		display: none;
+	}
+	.post-section > div:nth-child(2) {
+		width: 100%;
 	}
 }
