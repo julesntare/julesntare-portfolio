@@ -20,6 +20,15 @@ h6 {
 }
 a {
 	text-decoration: none;
+	color: #000;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	opacity: 0.7;
 }
 
 /* header styles */
@@ -148,6 +157,22 @@ section .contact-overlay-bg {
 	height: 350px;
 	display: flex;
 	justify-content: flex-end;
+}
+section .about-bg {
+	background: url('../assets/images/overlay-about-bg.png');
+	background-size: 100% 100%;
+}
+section .blog-bg {
+	background: url('../assets/images/overlay-blog-bg.png');
+	background-size: 100% 100%;
+}
+section .service-bg {
+	background: url('../assets/images/overlay-service-bg.png');
+	background-size: 100% 100%;
+}
+section .project-bg {
+	background: url('../assets/images/overlay-project-bg.png');
+	background-size: 100% 100%;
 }
 .overlay-contents-box {
 	width: 80%;
@@ -304,15 +329,6 @@ button:hover {
 .sections hr {
 	margin-bottom: 5px;
 }
-
-section .contact-overlay-bg {
-	background: url('../assets/images/blog-overlay-bg.png');
-	background-size: 100% 100%;
-	width: 100%;
-	height: 350px;
-	display: flex;
-	justify-content: flex-end;
-}
 .project-container {
 	display: flex;
 	justify-content: space-between;
@@ -358,6 +374,21 @@ section .contact-overlay-bg {
 	height: 40px;
 	font-size: 20px;
 }
+.marg-bottom {
+	margin-bottom: 200px;
+}
+.mg-bt-btn button {
+	margin-left: 20px;
+}
+.project-details div.tech-container {
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+}
+.tech-container img {
+	width: 55px;
+	height: 45px;
+}
 
 /* section my services styles */
 .services-container {
@@ -390,16 +421,15 @@ section .contact-overlay-bg {
 }
 .services > div:nth-child(2) {
 	margin-top: 15px;
+	min-height: 110px;
 }
 .services > div:not(:nth-child(1)) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex: 1;
 }
 .services > div:last-child {
-	flex: 5;
-	margin: 0 25px;
+	margin: 30px 25px;
 	line-height: 35px;
 	font-size: 20px;
 	text-align: center;
@@ -419,7 +449,31 @@ section .contact-overlay-bg {
 	height: 50px;
 	font-size: 20px;
 }
-
+.service-container-expanded {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 100px;
+}
+.service-container-expanded > div {
+	display: flex;
+}
+.service-container-expanded:nth-child(even) {
+	flex-direction: row-reverse;
+}
+.service-container-expanded > div:nth-child(1) {
+	width: 30%;
+}
+.service-container-expanded > div:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 60%;
+}
+.service-container-expanded img {
+	width: 250px;
+	height: 200px;
+}
 /* section my blog styles */
 .blog-container {
 	display: flex;
@@ -475,6 +529,17 @@ section .contact-overlay-bg {
 	font-size: 22px;
 	line-height: 30px;
 	margin-bottom: 30px;
+}
+
+/* section about me styles */
+.about-container * {
+	text-align: center;
+}
+.about-container p {
+	margin-bottom: 10px;
+}
+.about-container h1 {
+	margin: 25px 0;
 }
 
 /* lower footer styles */
@@ -638,6 +703,27 @@ textarea {
 	width: 100%;
 	height: 180px;
 	padding-top: 20px;
+}
+.success-msg {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	font-size: 24px;
+	background-color: rgba(107, 231, 138, 0.9);
+	border: 2px solid #111;
+	border-radius: 16px;
+	margin: 0 auto;
+	color: rgb(18, 80, 23);
+	animation: appear 0.4s;
+}
+@keyframes appear {
+	from {
+		height: 0;
+	}
+	to {
+		height: 50px;
+	}
 }
 
 /* login styles */
@@ -1070,7 +1156,29 @@ textarea {
 	.post-section > div:nth-child(1) {
 		display: none;
 	}
-	.post-section > div:nth-child(2) {
+  .post-section > div:nth-child(2) {
+    width: 100%;
+  }
+	.service-container-expanded {
+		flex-direction: column;
+	}
+	.service-container-expanded * {
+		margin-bottom: 20px;
+	}
+	.service-container-expanded:nth-child(even) {
+		flex-direction: column;
+	}
+	.service-container-expanded > div:nth-child(1),
+	.service-container-expanded > div:nth-child(2) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	.service-container-expanded > div * {
+		text-align: center;
+	}
+	.success-msg {
 		width: 100%;
 	}
 }

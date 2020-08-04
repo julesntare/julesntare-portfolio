@@ -22,10 +22,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">projects</a></li>
-                    <li><a href="#">services</a></li>
+                    <li><a href="./projects.html">projects</a></li>
+                    <li><a href="./services.html">services</a></li>
                     <li><a href="./contact.html">contact me</a></li>
-                    <li><a href="#">about me</a></li>
+                    <li><a href="./about.html">about me</a></li>
                     <li class="active"><a href="./blog.html">blog</a></li>
                 </ul>
                 <div class="toggle-menu" onclick="toggle(this)">
@@ -36,6 +36,7 @@
             </nav>
         </div>
     </header>
+    <div class="success-msg">Thank you for joining My Blog</div>
     <div class="login-container">
         <div class="first-side">
             <div class="content-center">
@@ -55,22 +56,22 @@
                 <div class="login-text">
                     <p>SIGN UP</p>
                 </div>
-                <form action="#">
+                <form action="#" id="signUpForm">
                     <div class="form-contents signup-contents">
                         <div class="input-box input-box1">
-                            <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text"
+                            <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text" id="firstName"
                                 placeholder="FIRST NAME">
                         </div>
                         <div class="input-box input-box1">
-                            <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text"
+                            <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text" id="lastName"
                                 placeholder="LAST NAME">
                         </div>
                         <div class="input-box input-box1">
-                            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i><input type="email"
+                            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i><input type="email" id="email"
                                 placeholder="EMAIL">
                         </div>
                         <div class="input-box input-box1">
-                            <i class="fa fa-lock fa-fw" aria-hidden="true"></i><input type="password"
+                            <i class="fa fa-lock fa-fw" aria-hidden="true"></i><input type="password" id="password"
                                 placeholder="PASSWORD">
                         </div>
                         <div class="input-box input-box1">
@@ -78,7 +79,7 @@
                                 placeholder="CONFIRM PASSWORD">
                         </div>
                         <div class="input-box view-more send-button">
-                            <button>SIGN UP</button>
+                            <button type="submit">SIGN UP</button>
                         </div>
                         <div class="bottom-text">
                             <span>New Here?</span><a href="./login.html">Log In</a>
@@ -92,6 +93,10 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/firebase-signup.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
