@@ -48,17 +48,17 @@
                 <div class="login-text">
                     <p>LOGIN</p>
                 </div>
-                <form action="#">
+                <form action="#" id="loginForm">
                     <div class="form-contents">
                         <div class="input-box input-box1">
-                            <i class="fa fa-user fa-2x" aria-hidden="true"></i><input type="text"
-                                placeholder="USERNAME">
+                            <i class="fa fa-user fa-2x" aria-hidden="true"></i><input type="email" id="email"
+                                placeholder="Email">
                         </div>
                         <div class="input-box input-box1">
-                            <i class="fa fa-lock fa-2x" aria-hidden="true"></i><input type="text"
+                            <i class="fa fa-lock fa-2x" aria-hidden="true"></i><input type="password" id="password"
                                 placeholder="PASSWORD"></div>
                         <div class="input-box view-more send-button">
-                            <button>LOGIN</button>
+                            <button type="submit">LOGIN</button>
                         </div>
                         <div class="input-box input-check">
                             <input class="remember-box" type="checkbox" name="" id=""> <span>Remember Me</span>
@@ -75,6 +75,10 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
+    <script defer src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="../scripts/firebase-config.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
