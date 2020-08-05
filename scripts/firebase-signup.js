@@ -21,6 +21,7 @@ function saveMessage(fname, lname, email, pswd) {
 		.auth()
 		.createUserWithEmailAndPassword(email, pswd)
 		.then((user) => {
+			console.log(user.id);
 			db.collection('users')
 				.doc(user.id)
 				.set({
