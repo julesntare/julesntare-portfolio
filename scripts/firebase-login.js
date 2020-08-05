@@ -1,12 +1,12 @@
 document.querySelector('#loginForm').addEventListener('submit', (e) => {
 	e.preventDefault();
-	let email = document.querySelector('#email');
-	let password = document.querySelector('#password');
+	let email = document.querySelector('#email').value;
+	let password = document.querySelector('#password').value;
 	firebase
 		.auth()
-		.createUserWithEmailAndPassword(email, password)
+		.signInWithEmailAndPassword(email, password)
 		.then((user) => {
-			console.log(user);
+			window.location.href = '../pages/blog.html';
 		})
 		.catch((error) => {
 			console.log(error);
