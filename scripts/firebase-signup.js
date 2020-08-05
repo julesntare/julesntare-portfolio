@@ -17,21 +17,28 @@ function getInputVal(id) {
 
 // save message to firebase
 function saveMessage(fname, lname, email, pswd) {
-	db.collection('users')
-		.add({
-			firstname: fname,
-			lastname: lname,
-			email: email,
-			password: pswd,
+	firebase
+		.auth()
+		.createUserWithEmailAndPassword(email, pswd)
+		.then((user) => {
+			db.collection('users')
+				.doc(user.id)
+				.set({
+					firstname: fname,
+					lastname: lname,
+				})
+				.then((docRef) => {
+					document.querySelector('.success-msg').style.display = 'flex';
+					setTimeout(() => {
+						document.querySelector('.success-msg').style.display = 'none';
+					}, 3500);
+					document.querySelector('#signUpForm').reset();
+				})
+				.catch(function (error) {
+					console.error('Error adding document: ', error);
+				});
 		})
-		.then(function (docRef) {
-			document.querySelector('.success-msg').style.display = 'flex';
-			setTimeout(() => {
-				document.querySelector('.success-msg').style.display = 'none';
-			}, 3500);
-			document.querySelector('#signUpForm').reset();
-		})
-		.catch(function (error) {
-			console.error('Error adding document: ', error);
+		.catch((error) => {
+			console.log(error);
 		});
 }
