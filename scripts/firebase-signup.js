@@ -31,7 +31,8 @@ function saveMessage(fname, lname, email, pswd) {
 					document.querySelector('.success-msg').style.display = 'flex';
 					setTimeout(() => {
 						document.querySelector('.success-msg').style.display = 'none';
-					}, 3500);
+						window.location.href = '../pages/login.html';
+					}, 1500);
 					document.querySelector('#signUpForm').reset();
 				})
 				.catch(function (error) {
