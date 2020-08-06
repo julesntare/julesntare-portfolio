@@ -729,8 +729,8 @@ footer {
 
 /* login styles */
 .login-container {
+	min-height: 60vh;
 	width: 50%;
-	height: 60vh;
 	margin: 33px auto;
 	background: linear-gradient(180deg, #182952 39.06%, rgba(59, 110, 233, 0) 100%);
 	box-shadow: 0px 0px 10px #172854;
@@ -743,7 +743,10 @@ footer {
 	align-items: center;
 }
 .first-side {
-	height: 100%;
+	display: flex;
+	align-items: center;
+	width: 55%;
+	height: inherit;
 }
 .content-center {
 	width: 85%;
@@ -774,7 +777,8 @@ footer {
 	color: #fffcfc;
 }
 .second-side {
-	height: 100%;
+	width: 45%;
+	min-height: 100%;
 	background: #fff;
 }
 .form-container {
@@ -783,9 +787,25 @@ footer {
 }
 .login-text {
 	width: 100%;
-	height: 60px;
+	height: 40px;
 	display: flex;
 	justify-content: center;
+}
+.login-with {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+}
+.login-with .social-links {
+	justify-content: space-evenly;
+}
+.login-with .social-links li {
+	cursor: pointer;
+}
+.or {
+	margin-top: 15px;
+	text-align: center;
 }
 .login-text p {
 	font-family: 'Agency FB' sans-serif;
