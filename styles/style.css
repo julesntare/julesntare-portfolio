@@ -686,7 +686,7 @@ footer {
 	justify-content: flex-start;
 }
 .contact-container form input,
-textarea {
+.contact-container form textarea {
 	outline: none;
 	background: transparent;
 	border: 3px solid #fff;
@@ -699,7 +699,7 @@ textarea {
 	width: 400px;
 	height: 60px;
 }
-textarea {
+.contact-container textarea {
 	width: 100%;
 	height: 180px;
 	padding-top: 20px;
@@ -1043,6 +1043,94 @@ textarea {
 	font-weight: bolder;
 }
 
+/* styles for post compose */
+.add-post-container,
+.top-intro,
+.post-contents-container {
+	display: flex;
+	flex-direction: column;
+}
+.add-post-container {
+	width: 100%;
+	min-height: 100%;
+	background: #f2f1f1;
+	padding-top: 20px;
+}
+.add-post-container > div {
+	width: 60%;
+	margin: 0 auto;
+}
+.top-intro {
+	justify-content: space-between;
+}
+.top-intro div:nth-child(1) {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+.top-intro div:nth-child(2) {
+	display: flex;
+	justify-content: flex-end;
+}
+.top-intro div:nth-child(1) button {
+	width: 70px;
+	height: 30px;
+}
+.top-intro div:nth-child(2) a {
+	margin-right: 10px;
+	opacity: 0.7;
+	font-size: 17px;
+}
+.top-intro div:nth-child(2) a.active {
+	opacity: 1;
+}
+.post-contents-container {
+	background-color: #fff;
+	margin-top: 10px;
+}
+.post-contents-container > * {
+	margin: 20px 50px;
+	color: #111;
+}
+.post-contents-container input[type='file'] {
+	display: none;
+}
+.custom-file-upload {
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 6px 12px;
+	cursor: pointer;
+}
+.post-contents-container input[type='text'],
+.post-contents-container textarea,
+.post-contents-container input[type='file'] {
+	border: none;
+	outline: none;
+}
+.post-contents-container input[type='text'] {
+	font-size: 40px;
+	font-weight: bolder;
+}
+.post-contents-container textarea {
+	height: 150px;
+	font-size: 25px;
+	font-weight: 800;
+}
+.add-post-container .actions {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.actions button {
+	font-size: 18px;
+	width: 120px;
+	height: 40px;
+}
+.actions button:nth-child(2) {
+	background: none;
+	color: #111;
+	border: 1px solid #0c1838;
+}
+
 /* media queries */
 @media (max-width: 740px) {
 	header .at-bottom {
@@ -1156,9 +1244,9 @@ textarea {
 	.post-section > div:nth-child(1) {
 		display: none;
 	}
-  .post-section > div:nth-child(2) {
-    width: 100%;
-  }
+	.post-section > div:nth-child(2) {
+		width: 100%;
+	}
 	.service-container-expanded {
 		flex-direction: column;
 	}
@@ -1180,5 +1268,8 @@ textarea {
 	}
 	.success-msg {
 		width: 100%;
+	}
+	.add-post-container > div {
+		width: 95%;
 	}
 }
