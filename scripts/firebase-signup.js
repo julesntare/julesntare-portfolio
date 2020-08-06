@@ -21,9 +21,8 @@ function saveMessage(fname, lname, email, pswd) {
 		.auth()
 		.createUserWithEmailAndPassword(email, pswd)
 		.then((user) => {
-			console.log(user.id);
 			db.collection('users')
-				.doc(user.id)
+				.doc(user.user.uid)
 				.set({
 					firstname: fname,
 					lastname: lname,
@@ -32,7 +31,8 @@ function saveMessage(fname, lname, email, pswd) {
 					document.querySelector('.success-msg').style.display = 'flex';
 					setTimeout(() => {
 						document.querySelector('.success-msg').style.display = 'none';
-					}, 3500);
+						window.location.href = '../pages/login.html';
+					}, 1500);
 					document.querySelector('#signUpForm').reset();
 				})
 				.catch(function (error) {
