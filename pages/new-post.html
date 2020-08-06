@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -35,31 +36,37 @@
             </nav>
         </div>
     </header>
-    <section>
-        <div class="post-container">
-            <div class="top-intro">
-                <div>
-                    <h2>New Post</h2>
-                    <button>Close</button>
-                </div>
-                <div>
-                    <a href="#">Edit</a>
-                    <a href="#">Preview</a>
-                </div>
+    <div class="add-post-container">
+        <div class="top-intro">
+            <div>
+                <h2>New Post</h2>
+                <button>Close</button>
             </div>
-            <div class="post-contents-container">
-                <input type="file" name="" id="">
-                <input type="text" name="" id="" placeholder="New Post title here...">
-                <input type="file" name="" id="">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write your post content here..."></textarea>
-            </div>
-            <div class="actions">
-                <button>Publish</button>
-                <button>save draft</button>
+            <div>
+                <a href="#" class="active">Edit</a>
+                <a href="#">Preview</a>
             </div>
         </div>
-
-    </section>
+        <div class="post-contents-container">
+            <div>
+                <label for="file-upload" class="custom-file-upload">
+                    Add Cover Image
+                </label>
+                <input type="file" name="" id="file-upload">
+            </div> <input type="text" name="" id="" placeholder="New Post title here...">
+            <div>
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-cloud-upload"></i> Upload Image
+                </label>
+                <input type="file" name="" id="file-upload">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Write your post content here..."></textarea>
+        </div>
+        <div class="actions">
+            <button>Publish</button>
+            <button>save draft</button>
+        </div>
+    </div>
     <footer>
         <div class="upper-footer">
             <div class="left-side">
