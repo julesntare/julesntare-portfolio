@@ -1139,11 +1139,11 @@ footer {
 	width: 75%;
 }
 .add-post-container .post-contents-container {
-	margin: 0;
 	margin-bottom: 20px;
 }
 .user-sidebar {
 	width: 20%;
+	margin-top: 10px;
 }
 .user-sidebar li {
 	display: flex;
