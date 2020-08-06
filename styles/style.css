@@ -22,6 +22,9 @@ a {
 	text-decoration: none;
 	color: #000;
 }
+li {
+	list-style: none;
+}
 h1 a,
 h2 a,
 h3 a,
@@ -87,7 +90,6 @@ nav ul {
 	flex-wrap: wrap;
 }
 nav ul li {
-	list-style: none;
 	opacity: 0.7;
 }
 nav ul li a {
@@ -244,9 +246,6 @@ section .project-bg {
 	display: flex;
 	justify-content: space-between;
 	width: 300px;
-}
-.social-links li {
-	list-style: none;
 }
 .social-links img {
 	width: 40px;
@@ -1130,6 +1129,73 @@ footer {
 	color: #111;
 	border: 1px solid #0c1838;
 }
+.add-post-container .settings-container {
+	display: flex;
+	justify-content: space-evenly;
+	width: 70%;
+	margin-top: 20px;
+}
+.settings-container > div:nth-child(2) {
+	width: 75%;
+}
+.add-post-container .post-contents-container {
+	margin: 0;
+}
+.user-sidebar {
+	width: 20%;
+}
+.user-sidebar li {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	padding-left: 10px;
+}
+.user-sidebar li:hover {
+	background: #eaeaea;
+}
+.user-sidebar a {
+	width: 100%;
+	font-size: 18px;
+}
+.user-sidebar .active {
+	background: #fff;
+	font-weight: 600;
+}
+.settings-container .post-contents-container > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 70px;
+	margin: 10px 40px;
+}
+.settings-container label {
+	font-size: 18px;
+	font-weight: 900;
+}
+.settings-container .post-contents-container input,
+.settings-container .post-contents-container textarea {
+	font-size: inherit;
+	border: 1px solid #777;
+	border-radius: 5px;
+	padding: 10px 0 5px 5px;
+}
+.settings-container .post-contents-container textarea {
+	height: 100px;
+}
+.settings-container .profile {
+	display: flex;
+	align-items: center;
+}
+.settings-container .profile input {
+	display: block;
+	border: none;
+	margin-left: 10px;
+}
+.settings-container .profile img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
 
 /* media queries */
 @media (max-width: 740px) {
@@ -1271,5 +1337,14 @@ footer {
 	}
 	.add-post-container > div {
 		width: 95%;
+	}
+	.add-post-container .settings-container {
+		width: 100%;
+	}
+	.settings-container > div:nth-child(2) {
+		width: 100%;
+	}
+	.user-sidebar {
+		display: none;
 	}
 }
