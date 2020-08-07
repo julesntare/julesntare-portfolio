@@ -17,7 +17,7 @@ firebase.auth().onAuthStateChanged((user) => {
 			});
 	} else {
 		document.querySelector('#login-box').style.display = 'flex';
-		document.querySelector('.avatar').style.display = 'flex';
+		document.querySelector('.avatar').style.display = 'none';
 	}
 });
 
