@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged((user) => {
 			.then((doc) => {
 				if (doc.exists) {
 					document.querySelector('#login-box').style.display = 'none';
-					document.querySelector('.profile-avatar').style.display = 'flex';
+					document.querySelector('.avatar').style.display = 'flex';
 					document.querySelector('.profile-avatar').innerHTML = doc.data().email[0].toUpperCase();
 				} else {
 					console.log('No such document!');
