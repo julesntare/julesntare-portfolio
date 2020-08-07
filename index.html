@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jules NTARE | My Brand</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,6 +27,11 @@
                     <li><a href="./pages/about.html">about me</a></li>
                     <li><a href="./pages/blog.html">blog</a></li>
                 </ul>
+                <div class="toggle-menu" onclick="toggle(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </nav>
         </div>
     </header>
@@ -37,15 +44,21 @@
                         A Full-stack web developer from kigali, RWANDA. I develop different type of web applications in
                         order to help businesses automate their activities.</p>
                     <ul class="social-links">
-                        <li><img src="./assets/images/social-icons/fb.jpg" alt=""></li>
-                        <li><img src="./assets/images/social-icons/twitter.png" alt=""></li>
-                        <li><img src="./assets/images/social-icons/email.jpg" alt=""></li>
-                        <li><img src="./assets/images/social-icons/instagram.jpg" alt=""></li>
-                        <li><img src="./assets/images/social-icons/whatsapp.jpg" alt=""></li>
+                        <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
+                                    src="./assets/images/social-icons/fb.jpg" alt="facebook"></a></li>
+                        <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
+                                    src="./assets/images/social-icons/twitter.png" alt="twitter"></a></li>
+                        <li><a href="mailto:julesntare@gmail.com" target="_blank"><img
+                                    src="./assets/images/social-icons/email.jpg" alt="email"></a></li>
+                        <li><a href="https://www.instagram.com/j.ntare/" target="_blank"><img
+                                    src="./assets/images/social-icons/instagram.jpg" alt="instagram"></a></li>
+                        <li><a href="tel:+250780674459"><img src="./assets/images/social-icons/whatsapp.jpg"
+                                    alt="phone"></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="overlay-box2">
-                    <button>Let's work</button>
+                    <a href="./pages/contact.html"><button>Let's work</button></a>
                 </div>
                 <div class="overlay-box3">
                     <img src="./assets/images/profile.jpg" alt="">
@@ -69,7 +82,7 @@
                         <p>A simple javascript web app that can be integrated in other apps which needs slides of some
                             images</p>
                     </div>
-                    <div><button>View Details</button></div>
+                    <div><a href="#"><button>View Details</button></a></div>
                 </div>
             </div>
         </div>
@@ -82,37 +95,32 @@
                 <div class="services service-details-1">
                     <div class="upper-line"></div>
                     <div>
-                        <img src="./assets/images/web-design-thumb.jpg" alt="">
+                        <img src="./assets/images/web-design-thumb.png" alt="">
                     </div>
                     <div>
-                        <h1>Web Design</h1>
-                    </div>
-                    <div class="subtitle">
-                        <p>User Focused</p>
+                        <h1>Web Application Development</h1>
                     </div>
                     <div>
-                        <p>A website should be designed for the people who will use it, so that's exactly what I do.
-                            User focused design should be the primary goal of any website.</p>
+                        <p>I create fast, beautiful, cost-effective and efficient websites and web applications with
+                            perfect scores in Performance, SEO and Best Practices. All web apps are built with the
+                            latest and sophisticated technologies</p>
                     </div>
                 </div>
                 <div class="services service-details-2">
                     <div class="upper-line"></div>
                     <div>
-                        <img src="./assets/images/web-development-thumb.png" alt="">
+                        <img src="./assets/images/database.png" alt="">
                     </div>
                     <div>
-                        <h1>Web Development</h1>
-                    </div>
-                    <div class="subtitle">
-                        <p>Responsive and Fast</p>
+                        <h1>Database Management</h1>
                     </div>
                     <div>
-                        <p>Every website should be built with two primary goals: Firstly, it needs to work across all
-                            devices. Secondly, it needs to be fast as possible.</p>
+                        <p>Keep the most important info about your employees organized in one place, learn in no time
+                            how and when you can reach them, monitor time off and payments.</p>
                     </div>
                 </div>
             </div>
-            <div class="view-more"><button>View More services</button></div>
+            <div class="view-more"><a href="./pages/services.html"><button>View More services</button></a></div>
         </div>
 
         <!-- my blog section -->
@@ -122,10 +130,10 @@
             <div class="blog-container">
                 <div class="blog-posts blog-post-1">
                     <div>
-                        <img src="./assets/images/calendar.PNG" alt="">
+                        <a href="#"><img src="./assets/images/calendar.PNG" alt=""></a>
                     </div>
                     <div>
-                        <h2>Calendar - A Simple Editorial Calendar for my site</h2>
+                        <h2><a href="#">Calendar - A Simple Editorial Calendar for my site</a></h2>
                     </div>
                     <div class="subtitle">
                         <p><span>Side projects</span> / 25th June, 2020</p>
@@ -137,10 +145,10 @@
                 </div>
                 <div class="blog-posts blog-post-2">
                     <div>
-                        <img src="./assets/images/person.PNG" alt="">
+                        <a href="#"><img src="./assets/images/person.PNG" alt=""></a>
                     </div>
                     <div>
-                        <h2>SEO Basics for Small Business Websites</h2>
+                        <h2><a href="#">SEO Basics for Small Business Websites</a></h2>
                     </div>
                     <div class="subtitle">
                         <p><span>Advice</span> / 02nd July, 2020</p>
@@ -152,7 +160,7 @@
                     </div>
                 </div>
             </div>
-            <div class="view-more"><button>View More Posts</button></div>
+            <div class="view-more"><a href="./pages/blog.html"><button>View More Posts</button></a></div>
         </div>
     </section>
     <footer>
@@ -164,16 +172,25 @@
                 <div>
                     <p>Have a project you'd like to discuss</p>
                 </div>
-                <div><button>Let's connect</button></div>
+                <div><a href="./pages/contact.html"><button>Let's connect</button></a></div>
             </div>
             <div class="right-side">
                 <ul class="social-links">
-                    <li><img src="./assets/images/social-icons/fb.jpg" alt=""> <span>julesntare</span></li>
-                    <li><img src="./assets/images/social-icons/twitter.png" alt=""> <span>@julesntare</span></li>
-                    <li><img src="./assets/images/social-icons/email.jpg" alt=""> <span>julesntare</span></li>
-                    <li><img src="./assets/images/social-icons/instagram.jpg" alt=""> <span>julesntare@gmail.com</span>
+                    <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
+                                src="./assets/images/social-icons/fb.jpg" alt="facebook"></a> <span>julesntare</span>
                     </li>
-                    <li><img src="./assets/images/social-icons/whatsapp.jpg" alt=""> <span>+250 780 674 459</span></li>
+                    <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
+                                src="./assets/images/social-icons/twitter.png" alt="twitter"></a>
+                        <span>@julesntare</span></li>
+                    <li><a href="mailto:julesntare@gmail.com" target="_blank"><img
+                                src="./assets/images/social-icons/email.jpg" alt="email"></a>
+                        <span>julesntare@gmail.com</span>
+                    </li>
+                    <li><a href="https://www.instagram.com/j.ntare/" target="_blank"><img
+                                src="./assets/images/social-icons/instagram.jpg" alt="instagram"></a>
+                        <span>julesntare</span></li>
+                    <li><a href="tel:+250780674459"><img src="./assets/images/social-icons/whatsapp.jpg"
+                                alt="phone"></a> <span>+250 780 674 459</span></li>
                 </ul>
             </div>
         </div>
