@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Jules NTARE</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="at-bottom">
+            <div class="brand-name">
+                <a href="../index.html">
+                    <h1>jules</h1>
+                    <div class="bottom-underline"></div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./projects.html">projects</a></li>
+                    <li><a href="./services.html">services</a></li>
+                    <li><a href="./contact.html">contact me</a></li>
+                    <li><a href="./about.html">about me</a></li>
+                    <li class="active"><a href="./blog.html">blog</a></li>
+                </ul>
+                <div class="toggle-menu" onclick="toggle(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="success-msg">Thank you for joining My Blog</div>
+    <div class="login-container">
+        <div class="first-side">
+            <div class="content-center">
+                <div>
+                    <p>Welcome to</p>
+                </div>
+                <div>
+                    <h1>Jules Blog</h1>
+                </div>
+                <div>
+                    <p>I post different articles about tech trends and tricks</p>
+                </div>
+            </div>
+        </div>
+        <div class="second-side">
+            <div class="form-container">
+                <div class="login-text">
+                    <p>SIGN UP</p>
+                </div>
+                <div class="login-with">
+                    <ul class="social-links">
+                        <li><img src="../assets/images/social-icons/fb.jpg" alt=""></li>
+                        <li><img src="../assets/images/social-icons/twitter.png" alt=""></li>
+                        <li><img src="../assets/images/social-icons/email.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="or">OR</div>
+                <div>
+                    <form action="#" id="signUpForm">
+                        <div class="form-contents signup-contents">
+                            <div class="input-box input-box1">
+                                <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text" id="firstName"
+                                    placeholder="FIRST NAME">
+                            </div>
+                            <div class="input-box input-box1">
+                                <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text" id="lastName"
+                                    placeholder="LAST NAME">
+                            </div>
+                            <div class="input-box input-box1">
+                                <i class="fa fa-envelope fa-fw" aria-hidden="true"></i><input type="email" id="email"
+                                    placeholder="EMAIL">
+                            </div>
+                            <div class="input-box input-box1">
+                                <i class="fa fa-lock fa-fw" aria-hidden="true"></i><input type="password" id="password"
+                                    placeholder="PASSWORD">
+                            </div>
+                            <div class="input-box input-box1">
+                                <i class="fa fa-lock fa-fw" aria-hidden="true"></i><input type="password" id="cpassword"
+                                    placeholder="CONFIRM PASSWORD">
+                            </div>
+                            <div class="input-box view-more send-button">
+                                <button type="submit">SIGN UP</button>
+                            </div>
+                            <div class="bottom-text">
+                                <span>New Here?</span><a href="./login.html">Log In</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="login-footer">
+        <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
+            Jules NTARE. All rights reserved.</div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/firebase-signup.js"></script>
+    <script src="../scripts/scripts.js"></script>
+</body>
+
+</html>
