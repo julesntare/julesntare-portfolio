@@ -1,12 +1,45 @@
 document.querySelector('#loginForm').addEventListener('submit', (e) => {
 	e.preventDefault();
-	let email = document.querySelector('#email');
-	let password = document.querySelector('#password');
+	let email = document.querySelector('#email').value;
+	let password = document.querySelector('#password').value;
 	firebase
 		.auth()
-		.createUserWithEmailAndPassword(email, password)
+		.signInWithEmailAndPassword(email, password)
 		.then((user) => {
-			console.log(user);
+			window.location.href = '../pages/blog.html';
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+});
+
+// fb authentication
+document.querySelector('#fbAuth').addEventListener('click', (e) => {
+	var fbProvider = new firebase.auth.FacebookAuthProvider();
+	firebase
+		.auth()
+		.signInWithPopup(fbProvider)
+		.then((result) => {
+			window.location.href = '../pages/blog.html';
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+});
+
+// twitter authentication
+document.querySelector('#twitterAuth').addEventListener('click', (e) => {
+	e.preventDefault();
+});
+
+// google authentication
+document.querySelector('#googleAuth').addEventListener('click', (e) => {
+	var googleProvider = new firebase.auth.GoogleAuthProvider();
+	firebase
+		.auth()
+		.signInWithPopup(googleProvider)
+		.then((result) => {
+			window.location.href = '../pages/blog.html';
 		})
 		.catch((error) => {
 			console.log(error);
