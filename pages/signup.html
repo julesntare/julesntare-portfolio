@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Jules NTARE</title>
+    <title>Sign Up | Jules NTARE</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
@@ -36,6 +36,7 @@
             </nav>
         </div>
     </header>
+    <div class="success-msg">Thank you for joining My Blog</div>
     <div class="login-container">
         <div class="first-side">
             <div class="content-center">
@@ -53,38 +54,38 @@
         <div class="second-side">
             <div class="form-container">
                 <div class="login-text">
-                    <p>LOGIN</p>
+                    <p>SIGN UP</p>
                 </div>
-                <div class="login-with">
-                    <ul class="social-links">
-                        <li id="fbAuth"><img src="../assets/images/social-icons/fb.jpg" alt=""></li>
-                        <li id="twitterAuth"><img src="../assets/images/social-icons/twitter.png" alt=""></li>
-                        <li id="googleAuth"><img src="../assets/images/social-icons/email.jpg" alt=""></li>
-                    </ul>
-                </div>
-                <div class="or">OR</div>
-                <div>
-                    <form action="#" id="loginForm">
-                        <div class="form-contents">
-                            <div class="input-box input-box1">
-                                <i class="fa fa-user fa-2x" aria-hidden="true"></i><input type="email" id="email"
-                                    placeholder="Email">
-                            </div>
-                            <div class="input-box input-box1">
-                                <i class="fa fa-lock fa-2x" aria-hidden="true"></i><input type="password" id="password"
-                                    placeholder="PASSWORD"></div>
-                            <div class="input-box view-more send-button">
-                                <button type="submit">LOGIN</button>
-                            </div>
-                            <div class="input-box input-check">
-                                <input class="remember-box" type="checkbox" name="" id=""> <span>Remember Me</span>
-                            </div>
-                            <div class="bottom-text">
-                                <span>New Here?</span><a href="./signup.html">Sign Up</a>
-                            </div>
+                <form action="#" id="signUpForm">
+                    <div class="form-contents signup-contents">
+                        <div class="input-box input-box1">
+                            <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text" id="firstName"
+                                placeholder="FIRST NAME">
                         </div>
-                    </form>
-                </div>
+                        <div class="input-box input-box1">
+                            <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text" id="lastName"
+                                placeholder="LAST NAME">
+                        </div>
+                        <div class="input-box input-box1">
+                            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i><input type="email" id="email"
+                                placeholder="EMAIL">
+                        </div>
+                        <div class="input-box input-box1">
+                            <i class="fa fa-lock fa-fw" aria-hidden="true"></i><input type="password" id="password"
+                                placeholder="PASSWORD">
+                        </div>
+                        <div class="input-box input-box1">
+                            <i class="fa fa-lock fa-fw" aria-hidden="true"></i><input type="password" id="cpassword"
+                                placeholder="CONFIRM PASSWORD">
+                        </div>
+                        <div class="input-box view-more send-button">
+                            <button type="submit">SIGN UP</button>
+                        </div>
+                        <div class="bottom-text">
+                            <span>New Here?</span><a href="./login.html">Log In</a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -96,7 +97,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/firebase-login.js"></script>
+    <script src="../scripts/firebase-signup.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
