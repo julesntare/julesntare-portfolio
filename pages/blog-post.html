@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - A Simple Editorial Calendar for my site | Jules NTARE</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="at-bottom">
+            <div class="brand-name">
+                <a href="../index.html">
+                    <h1>jules</h1>
+                    <div class="bottom-underline"></div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./projects.html">projects</a></li>
+                    <li><a href="./services.html">services</a></li>
+                    <li><a href="./contact.html">contact me</a></li>
+                    <li><a href="./about.html">about me</a></li>
+                    <li class="active"><a href="./blog.html">blog</a></li>
+                    <a href="./login.html" class="login-link">Login</a>
+                </ul>
+                <div class="toggle-menu" onclick="toggle(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="contact-overlay-bg">
+            <div class="overlay-contents">
+                <div>
+                    <h1>Post</h1>
+                </div>
+                <div>
+                    <p>Calendar - A Simple Editorial Calendar for my site
+                    </p>
+                </div>
+                <p><span>Side projects</span> / 25th June, 2020</p>
+            </div>
+        </div>
+
+        <!-- my blog section -->
+        <div class="post-section">
+            <div class="author-section">
+                <div class="author-profile"><img src="../assets/images/profile.jpg" alt=""></div>
+                <div class="author-social-icons">
+                    <ul class="social-links">
+                        <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
+                                    src="../assets/images/social-icons/fb.jpg" alt="facebook"></a>
+                        </li>
+                        <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
+                                    src="../assets/images/social-icons/twitter.png" alt="twitter"></a>
+                        </li>
+                        <li><a href="mailto:julesntare@gmail.com" target="_blank"><img
+                                    src="../assets/images/social-icons/email.jpg" alt="email"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="author-post-details">
+                    <h3>author:</h3>
+                    <p>Jules NTARE</p>
+                </div>
+                <div class="author-post-details">
+                    <h3>date:</h3>
+                    <p>Aug 03, 2020</p>
+                </div>
+                <div class="author-post-details">
+                    <h3>category:</h3>
+                    <p>Working in Digital</p>
+                </div>
+                <div class="author-post-details">
+                    <h3>about author:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illo placeat harum
+                        perferendis blanditiis! Tenetur est harum dicta asperiores error iure! Asperiores harum hic
+                        exercitationem quaerat amet tempore laborum est!</p>
+                </div>
+                <div class="post-likes">
+                    <img src="../assets/images/made-love.png" alt="">
+                    <h2>113</h2>
+                </div>
+                <div class="post-share-links">
+                    <div><input type="text" name="post-link" id=""
+                            value="https://julesntare.netlify.app/pages/blog-post.html"><img
+                            src="../assets/images/clipboard.png" /></div>
+                    <div class="copied">Copied to clipboard</div>
+                    <div><a href="#">Share to Facebook</a></div>
+                    <div><a href="#">Share to Twitter</a></div>
+                    <div><a href="#">Share to LinkedIn</a></div>
+                    <div><a href="#">Share to Whatsapp</a></div>
+                </div>
+                <div class="post-shares">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="blog-post-container">
+                <div class="post-details">
+                    <div>
+                        <img src="../assets/images/calendar.PNG" alt="">
+                    </div>
+                    <div class="post-paras">
+                        <p>I recently released my first WordPress plugin. Here's what I've learned about building
+                            and
+                            releasing something for free.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda id fuga distinctio
+                            ducimus ipsam laborum dignissimos alias labore atque, harum, similique voluptatem
+                            corporis
+                            eum aliquam ab quibusdam praesentium? Ipsum, doloremque?</p>
+                        <p>I recently released my first WordPress plugin. Here's what I've learned about building
+                            and
+                            releasing something for free.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore et optio in hic quidem
+                            architecto asperiores nemo cum laudantium unde, blanditiis voluptate repellat facere,
+                            cumque
+                            obcaecati suscipit odit velit. Laborum.</p>
+                    </div>
+                </div>
+
+                <div class="comment-section">
+                    <h2>Leave a Reply</h2>
+                    <form action="#">
+                        <div class="form-group">
+                            <textarea name="msg" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="form-group view-more">
+                            <button type="submit">Comment</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="replies-section">
+                    <span>comments(1)</span>
+                    <hr />
+                    <div class="comment-user">
+                        <div><img src="../assets/images/profile.jpg" alt=""></div>
+                        <div>
+                            <h3>John Doe</h3>
+                            <span>July 29, 2020 at 2:35 am</span>
+                        </div>
+                    </div>
+                    <div class="view-more">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illo placeat harum
+                            perferendis blanditiis! Tenetur est harum dicta asperiores error iure! Asperiores harum
+                            hic
+                            exercitationem quaerat amet tempore laborum est!</p>
+                        <a href="#">Reply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="upper-footer">
+            <div class="left-side">
+                <div>
+                    <h1>let's work together</h1>
+                </div>
+                <div>
+                    <p>Have a project you'd like to discuss</p>
+                </div>
+                <div><a href="./contact.html"><button>Let's connect</button></a></div>
+            </div>
+            <div class="right-side">
+                <ul class="social-links">
+                    <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
+                                src="../assets/images/social-icons/fb.jpg" alt="facebook"></a> <span>julesntare</span>
+                    </li>
+                    <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
+                                src="../assets/images/social-icons/twitter.png" alt="twitter"></a>
+                        <span>@julesntare</span></li>
+                    <li><a href="mailto:julesntare@gmail.com" target="_blank"><img
+                                src="../assets/images/social-icons/email.jpg" alt="email"></a>
+                        <span>julesntare@gmail.com</span>
+                    </li>
+                    <li><a href="https://www.instagram.com/j.ntare/" target="_blank"><img
+                                src="../assets/images/social-icons/instagram.jpg" alt="instagram"></a>
+                        <span>julesntare</span></li>
+                    <li><a href="tel:+250780674459"><img src="../assets/images/social-icons/whatsapp.jpg"
+                                alt="phone"></a> <span>+250 780 674 459</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
+            Jules NTARE. All rights reserved.</div>
+    </footer>
+    <script src="../scripts/scripts.js"></script>
+</body>
+
+</html>
