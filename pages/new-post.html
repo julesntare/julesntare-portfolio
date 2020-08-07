@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Jules NTARE</title>
+    <title>New-Post | Jules NTARE</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -23,9 +24,9 @@
                 <ul>
                     <li><a href="./projects.html">projects</a></li>
                     <li><a href="./services.html">services</a></li>
-                    <li class="active"><a href="./contact.html">contact me</a></li>
+                    <li><a href="./contact.html">contact me</a></li>
                     <li><a href="./about.html">about me</a></li>
-                    <li><a href="./blog.html">blog</a></li>
+                    <li class="active"><a href="./blog.html">blog</a></li>
                 </ul>
                 <div class="toggle-menu" onclick="toggle(this)">
                     <div class="bar1"></div>
@@ -35,44 +36,37 @@
             </nav>
         </div>
     </header>
-    <section>
-        <div class="contact-overlay-bg">
-            <div class="overlay-contents">
-                <div>
-                    <h1>Contact Me</h1>
-                </div>
-                <div>
-                    <p>You can reach me via contacting by fulfilling below form or via my social platforms also
-                        mentioned
-                        below.
-                        I will reply you within few minutes.
-                    </p>
-                </div>
+    <div class="add-post-container">
+        <div class="top-intro">
+            <div>
+                <h2>New Post</h2>
+                <button>Close</button>
+            </div>
+            <div>
+                <a href="#" class="active">Edit</a>
+                <a href="#">Preview</a>
             </div>
         </div>
-        <div class="contact-container">
-            <form id="contactForm">
-                <div class="success-msg">Thank you for reaching out to me</div>
-                <div class="form-group form-group-1">
-                    <div class="input1">
-                        <label for="">Name</label>
-                        <input type="text" name="name" id="name" placeholder="" autocomplete="off">
-                    </div>
-                    <div class="input2">
-                        <label for="">Email</label>
-                        <input type="email" name="email" id="email" placeholder="" autocomplete="off">
-                    </div>
-                </div>
-                <div class="form-group form-group-2">
-                    <label for="">Message</label>
-                    <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
-                </div>
-                <div class="form-group form-group-3 view-more">
-                    <button type="submit">Send</button>
-                </div>
-            </form>
+        <div class="post-contents-container">
+            <div>
+                <label for="file-upload" class="custom-file-upload">
+                    Add Cover Image
+                </label>
+                <input type="file" name="" id="file-upload">
+            </div> <input type="text" name="" id="" placeholder="New Post title here...">
+            <div>
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-cloud-upload"></i> Upload Image
+                </label>
+                <input type="file" name="" id="file-upload">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Write your post content here..."></textarea>
         </div>
-    </section>
+        <div class="actions">
+            <button>Publish</button>
+            <button>save draft</button>
+        </div>
+    </div>
     <footer>
         <div class="upper-footer">
             <div class="left-side">
@@ -82,7 +76,7 @@
                 <div>
                     <p>Have a project you'd like to discuss</p>
                 </div>
-                <div><a href="#"><button>Let's connect</button></a></div>
+                <div><a href="./contact.html"><button>Let's connect</button></a></div>
             </div>
             <div class="right-side">
                 <ul class="social-links">
@@ -107,11 +101,6 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/contact.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
