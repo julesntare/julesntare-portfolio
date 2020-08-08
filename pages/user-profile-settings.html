@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Jules NTARE</title>
+    <title>New-Post | Jules NTARE</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -26,15 +27,6 @@
                     <li><a href="./contact.html">contact me</a></li>
                     <li><a href="./about.html">about me</a></li>
                     <li class="active"><a href="./blog.html">blog</a></li>
-                    <li id="login-box"><a href="./login.html" class="login-link">Login</a></li>
-                    <div class="avatar">
-                        <span id="profile-avatar">u</span>
-                        <ul class="menu">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li id="logout"><a href="#">Logout</a></li>
-                        </ul>
-                    </div>
                 </ul>
                 <div class="toggle-menu" onclick="toggle(this)">
                     <div class="bar1"></div>
@@ -45,27 +37,38 @@
         </div>
     </header>
     <section>
-        <div class="contact-overlay-bg blog-bg">
-            <div class="overlay-contents">
-                <div>
-                    <h1>Blog</h1>
+        <div class="add-post-container">
+            <div class="top-intro">
+                <h1>Settings for @julesntare</h1>
+            </div>
+            <div class="settings-container">
+                <div class="user-sidebar">
+                    <ul>
+                        <li class="active"><a href="./user-profile-settings.html">Profile</a></li>
+                        <li><a href="./user-notifications.html">Notifications</a></li>
+                        <li><a href="./user-account.html">Account</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <p>I try to publish some articles mainly about tech.
-                    </p>
+                    <div class="post-contents-container">
+                        <div><label for="">Email</label><input type="email"></div>
+                        <div><label for="">Name</label><input type="text"></div>
+                        <div><label for=""></label>
+                            <div class="profile">
+                                <img src="../assets//images/profile.jpg" alt="">
+                                <input type="file">
+                            </div>
+                        </div>
+                        <div><label for="">A short bio</label><textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div><label for="">Location</label><input type="text"></div>
+                        <div><label for="">social Links</label><input type="text"></div>
+                    </div>
+                    <div class="actions">
+                        <button>Save</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- my blog section -->
-        <div class="sections services-container">
-            <div class="blog-container">
-            </div>
-            <div class="blog-buttons">
-                <div class="view-more"><button>Previous</button></div>
-                <div class="view-more"><button>Next</button></div>
-            </div>
-        </div>
     </section>
     <footer>
         <div class="upper-footer">
@@ -101,11 +104,6 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/blog.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
