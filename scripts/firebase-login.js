@@ -45,3 +45,10 @@ document.querySelector('#googleAuth').addEventListener('click', (e) => {
 			console.log(error);
 		});
 });
+
+// check auth state
+firebase.auth().onAuthStateChanged(function (user) {
+	if (user) {
+		window.location.href = '../pages/blog.html';
+	}
+});
