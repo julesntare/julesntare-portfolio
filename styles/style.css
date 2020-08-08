@@ -751,6 +751,7 @@ footer {
 	padding: 6px 4px;
 }
 .menu li > a {
+	width: 100%;
 	color: #fff;
 }
 
