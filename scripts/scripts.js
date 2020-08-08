@@ -22,7 +22,7 @@ if (avatar) {
 			document.querySelector('.avatar').style.display = 'none';
 		}
 	});
-	document.querySelector('#login-box').addEventListener('click', (e) => {
+	document.querySelector('#logout').addEventListener('click', (e) => {
 		e.preventDefault();
 		firebase.auth().signOut();
 		window.location.href = './blog.html';
