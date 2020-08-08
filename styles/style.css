@@ -711,7 +711,6 @@ footer {
 	height: 180px;
 	padding-top: 20px;
 }
-<<<<<<< HEAD
 /* profile menu */
 .avatar {
 	width: 40px;
@@ -770,8 +769,6 @@ footer {
 .avatar:hover .menu {
 	display: block;
 }
-=======
->>>>>>> 3aab092db4874849033b039eeabd9337a9f90264
 .success-msg {
 	display: none;
 	justify-content: center;
