@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar - A Simple Editorial Calendar for my site | Jules NTARE</title>
+    <title>Services | Jules NTARE</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
@@ -22,20 +22,10 @@
             <nav>
                 <ul>
                     <li><a href="./projects.html">projects</a></li>
-                    <li><a href="./services.html">services</a></li>
+                    <li class="active"><a href="./services.html">services</a></li>
                     <li><a href="./contact.html">contact me</a></li>
                     <li><a href="./about.html">about me</a></li>
-                    <li class="active"><a href="./blog.html">blog</a></li>
-                    <li id="login-box"><a href="./login.html" class="login-link">Login</a></li>
-                    <div class="avatar">
-                        <span id="profile-avatar"></span>
-                        <ul class="menu">
-                            <li><a href="./user-profile-settings.html">Profile</a></li>
-                            <li><a href="./user-notifications.html">Notifications</a></li>
-                            <li><a href="./user-account">Account</a></li>
-                            <li id="logout"><a href="#">Logout</a></li>
-                        </ul>
-                    </div>
+                    <li><a href="./blog.html">blog</a></li>
                 </ul>
                 <div class="toggle-menu" onclick="toggle(this)">
                     <div class="bar1"></div>
@@ -46,58 +36,85 @@
         </div>
     </header>
     <section>
-        <div class="contact-overlay-bg">
+        <div class="contact-overlay-bg service-bg">
             <div class="overlay-contents">
                 <div>
-                    <h1>Post</h1>
+                    <h1>Services</h1>
                 </div>
                 <div>
-                    <p id="post-title">Calendar - A Simple Editorial Calendar for my site
+                    <p>Below are some of services I’m capable of providing
+                        according to my skills:
                     </p>
                 </div>
-                <p><span>last updated on <span id="created-at"></span></p>
             </div>
         </div>
-
-        <!-- my blog section -->
-        <div class="post-section">
-            <div class="author-section">
-            </div>
-            <div class="blog-post-container">
-                <div class="post-details">
+        <!-- featured projects section -->
+        <div class="sections features-container">
+            <div class="service-container-expanded">
+                <div class="service-thumb">
+                    <img src="../assets/images/responsive-web-design-web-development-computer-icons-icon-design-png-favpng-nDHYbePFnXDSXgv0jm6QdSJgC-removebg-preview.png"
+                        alt="">
                 </div>
-
-                <div class="comment-section">
-                    <h2>Leave a Reply</h2>
-                    <form action="#">
-                        <div class="form-group">
-                            <textarea name="msg" id="" cols="30" rows="10"></textarea>
-                        </div>
-                        <div class="form-group view-more">
-                            <button type="submit">Comment</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="replies-section">
-                    <span>comments(1)</span>
-                    <hr />
-                    <div class="comment-user">
-                        <div><img src="../assets/images/profile.jpg" alt=""></div>
-                        <div>
-                            <h3>John Doe</h3>
-                            <span>July 29, 2020 at 2:35 am</span>
-                        </div>
+                <div class="service-details">
+                    <div>
+                        <h1>Web Application Development</h1>
                     </div>
-                    <div class="view-more">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illo placeat harum
-                            perferendis blanditiis! Tenetur est harum dicta asperiores error iure! Asperiores harum
-                            hic
-                            exercitationem quaerat amet tempore laborum est!</p>
-                        <a href="#">Reply</a>
+                    <div>
+                        <p>I create fast, beautiful, cost-effective and efficient websites and web applications with
+                            perfect scores in Performance, SEO and Best Practices. All web apps are built with the
+                            latest and sophisticated technologies</p>
                     </div>
                 </div>
             </div>
+            <div class="service-container-expanded">
+                <div class="service-thumb">
+                    <img src="../assets/images/database.png" alt="">
+                </div>
+                <div class="service-details">
+                    <div>
+                        <h1>Database Management
+                        </h1>
+                    </div>
+                    <div>
+                        <p>Keep the most important info about your employees organized in one place, learn in no time
+                            how and when you can reach them, monitor time off and payments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-container-expanded">
+                <div class="service-thumb">
+                    <img src="../assets/images/repair.png" alt="">
+                </div>
+                <div class="service-details">
+                    <div>
+                        <h1>Computer Repair
+                        </h1>
+                    </div>
+                    <div>
+                        <p>Our computer repair services include desktop and laptop computers of all types and brands,
+                            particularly PC type computers. We can also repair/replace your laptop screen or
+                            backlighting issue depending upon your computer make and model</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-container-expanded">
+                <div class="service-thumb">
+                    <img src="../assets/images/ui.png" alt="">
+                </div>
+                <div class="service-details">
+                    <div>
+                        <h1>User Interface Design
+                        </h1>
+                    </div>
+                    <div>
+                        <p>I have an eye for detail, passion for color theory & psychology, enjoy playing with type and
+                            breaking the grid. I value simplicity and clarity so I design easy to use and engaging
+                            interfaces for desktop and mobile.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </section>
     <footer>
         <div class="upper-footer">
@@ -133,11 +150,6 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/blog-post.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 

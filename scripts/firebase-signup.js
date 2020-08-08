@@ -17,6 +17,7 @@ function getInputVal(id) {
 
 // save message to firebase
 function saveMessage(fname, lname, email, pswd) {
+<<<<<<< HEAD
 	firebase
 		.auth()
 		.createUserWithEmailAndPassword(email, pswd)
@@ -41,5 +42,23 @@ function saveMessage(fname, lname, email, pswd) {
 		})
 		.catch((error) => {
 			console.log(error);
+=======
+	db.collection('users')
+		.add({
+			firstname: fname,
+			lastname: lname,
+			email: email,
+			password: pswd,
+		})
+		.then(function (docRef) {
+			document.querySelector('.success-msg').style.display = 'flex';
+			setTimeout(() => {
+				document.querySelector('.success-msg').style.display = 'none';
+			}, 3500);
+			document.querySelector('#signUpForm').reset();
+		})
+		.catch(function (error) {
+			console.error('Error adding document: ', error);
+>>>>>>> 3aab092db4874849033b039eeabd9337a9f90264
 		});
 }
