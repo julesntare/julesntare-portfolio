@@ -733,11 +733,12 @@ footer {
 /* hide menu */
 .menu {
 	display: none;
-	width: 250px;
-	height: 120px;
+	width: 200px;
+	min-height: 120px;
 	margin: 30px 0 0 0;
 	position: absolute;
 	top: 10px;
+	right: -20px;
 	background: #0e172d;
 	border-radius: 5px;
 }
@@ -750,6 +751,7 @@ footer {
 	padding: 6px 4px;
 }
 .menu li > a {
+	width: 100%;
 	color: #fff;
 }
 
