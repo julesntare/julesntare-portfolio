@@ -22,12 +22,9 @@ a {
 	text-decoration: none;
 	color: #000;
 }
-<<<<<<< HEAD
 li {
 	list-style: none;
 }
-=======
->>>>>>> 3aab092db4874849033b039eeabd9337a9f90264
 h1 a,
 h2 a,
 h3 a,
@@ -35,14 +32,11 @@ h4 a,
 h5 a,
 h6 a {
 	opacity: 0.7;
-<<<<<<< HEAD
 }
 input,
 textarea,
 button {
 	outline: none;
-=======
->>>>>>> 3aab092db4874849033b039eeabd9337a9f90264
 }
 
 /* header styles */
@@ -1433,9 +1427,9 @@ footer {
 	.post-section > div:nth-child(1) {
 		display: none;
 	}
-  .post-section > div:nth-child(2) {
-    width: 100%;
-  }
+	.post-section > div:nth-child(2) {
+		width: 100%;
+	}
 	.service-container-expanded {
 		flex-direction: column;
 	}
