@@ -22,9 +22,12 @@ a {
 	text-decoration: none;
 	color: #000;
 }
+<<<<<<< HEAD
 li {
 	list-style: none;
 }
+=======
+>>>>>>> 3aab092db4874849033b039eeabd9337a9f90264
 h1 a,
 h2 a,
 h3 a,
@@ -32,11 +35,14 @@ h4 a,
 h5 a,
 h6 a {
 	opacity: 0.7;
+<<<<<<< HEAD
 }
 input,
 textarea,
 button {
 	outline: none;
+=======
+>>>>>>> 3aab092db4874849033b039eeabd9337a9f90264
 }
 
 /* header styles */
@@ -705,6 +711,7 @@ footer {
 	height: 180px;
 	padding-top: 20px;
 }
+<<<<<<< HEAD
 /* profile menu */
 .avatar {
 	width: 40px;
@@ -763,6 +770,8 @@ footer {
 .avatar:hover .menu {
 	display: block;
 }
+=======
+>>>>>>> 3aab092db4874849033b039eeabd9337a9f90264
 .success-msg {
 	display: none;
 	justify-content: center;
@@ -1427,7 +1436,29 @@ footer {
 	.post-section > div:nth-child(1) {
 		display: none;
 	}
-	.post-section > div:nth-child(2) {
+  .post-section > div:nth-child(2) {
+    width: 100%;
+  }
+	.service-container-expanded {
+		flex-direction: column;
+	}
+	.service-container-expanded * {
+		margin-bottom: 20px;
+	}
+	.service-container-expanded:nth-child(even) {
+		flex-direction: column;
+	}
+	.service-container-expanded > div:nth-child(1),
+	.service-container-expanded > div:nth-child(2) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	.service-container-expanded > div * {
+		text-align: center;
+	}
+	.success-msg {
 		width: 100%;
 	}
 	.service-container-expanded {

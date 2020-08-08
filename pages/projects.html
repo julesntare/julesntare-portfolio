@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar - A Simple Editorial Calendar for my site | Jules NTARE</title>
+    <title>Projects | Jules NTARE</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
@@ -21,21 +21,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./projects.html">projects</a></li>
+                    <li class="active"><a href="./projects.html">projects</a></li>
                     <li><a href="./services.html">services</a></li>
                     <li><a href="./contact.html">contact me</a></li>
                     <li><a href="./about.html">about me</a></li>
-                    <li class="active"><a href="./blog.html">blog</a></li>
-                    <li id="login-box"><a href="./login.html" class="login-link">Login</a></li>
-                    <div class="avatar">
-                        <span id="profile-avatar"></span>
-                        <ul class="menu">
-                            <li><a href="./user-profile-settings.html">Profile</a></li>
-                            <li><a href="./user-notifications.html">Notifications</a></li>
-                            <li><a href="./user-account">Account</a></li>
-                            <li id="logout"><a href="#">Logout</a></li>
-                        </ul>
-                    </div>
+                    <li><a href="./blog.html">blog</a></li>
                 </ul>
                 <div class="toggle-menu" onclick="toggle(this)">
                     <div class="bar1"></div>
@@ -46,58 +36,66 @@
         </div>
     </header>
     <section>
-        <div class="contact-overlay-bg">
+        <div class="contact-overlay-bg project-bg">
             <div class="overlay-contents">
                 <div>
-                    <h1>Post</h1>
+                    <h1>Projects</h1>
                 </div>
                 <div>
-                    <p id="post-title">Calendar - A Simple Editorial Calendar for my site
+                    <p>For the over 3 years I’ve been designing and developing web applications over different languages
+                        like PHP, javascript and few more others.
                     </p>
                 </div>
-                <p><span>last updated on <span id="created-at"></span></p>
             </div>
         </div>
-
-        <!-- my blog section -->
-        <div class="post-section">
-            <div class="author-section">
-            </div>
-            <div class="blog-post-container">
-                <div class="post-details">
+        <!-- featured projects section -->
+        <div class="sections features-container">
+            <div class="project-container marg-bottom">
+                <div class="project-thumb">
+                    <img src="../assets/images/slider.PNG" alt="">
                 </div>
-
-                <div class="comment-section">
-                    <h2>Leave a Reply</h2>
-                    <form action="#">
-                        <div class="form-group">
-                            <textarea name="msg" id="" cols="30" rows="10"></textarea>
-                        </div>
-                        <div class="form-group view-more">
-                            <button type="submit">Comment</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="replies-section">
-                    <span>comments(1)</span>
-                    <hr />
-                    <div class="comment-user">
-                        <div><img src="../assets/images/profile.jpg" alt=""></div>
-                        <div>
-                            <h3>John Doe</h3>
-                            <span>July 29, 2020 at 2:35 am</span>
-                        </div>
+                <div class="project-details">
+                    <div>
+                        <h1>Jslides</h1>
                     </div>
-                    <div class="view-more">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illo placeat harum
-                            perferendis blanditiis! Tenetur est harum dicta asperiores error iure! Asperiores harum
-                            hic
-                            exercitationem quaerat amet tempore laborum est!</p>
-                        <a href="#">Reply</a>
+                    <div>
+                        <p>A simple javascript web app that can be integrated in other apps which needs slides of some
+                            images</p>
+                    </div>
+                    <div class="tech-container">
+                        <img src="../assets/images/html-icon.png" alt="html-icon">
+                        <img src="../assets/images/css-icon.png" alt="css-icon">
+                        <img src="../assets/images/js-icon.png" alt="js-icon">
+                    </div>
+                    <div class="mg-bt-btn"><a href="#"><button>GitHub</button></a><a href="#"><button>View</button></a>
                     </div>
                 </div>
             </div>
+            <div class="project-container marg-bottom">
+                <div class="project-thumb">
+                    <img src="../assets/images/timerate.PNG" alt="">
+                </div>
+                <div class="project-details">
+                    <div>
+                        <h1>Time Rate wages generating
+                            system
+                        </h1>
+                    </div>
+                    <div>
+                        <p>A PHP web application i designed in my final year project, which help to generate wages for
+                            employees</p>
+                    </div>
+                    <div class="tech-container">
+                        <img src="../assets/images/html-icon.png" alt="html-icon">
+                        <img src="../assets/images/css-icon.png" alt="css-icon">
+                        <img src="../assets/images/php-icon.jpg" alt="php-icon">
+                    </div>
+                    <div class="mg-bt-btn"><a href="#"><button>GitHub</button></a><a href="#"><button>View</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </section>
     <footer>
         <div class="upper-footer">
@@ -133,11 +131,6 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/blog-post.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
