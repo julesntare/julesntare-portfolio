@@ -26,7 +26,16 @@
                     <li><a href="./contact.html">contact me</a></li>
                     <li><a href="#">about me</a></li>
                     <li class="active"><a href="./blog.html">blog</a></li>
-                    <a href="./login.html" class="login-link">Login</a>
+                    <li id="login-box"><a href="./login.html" class="login-link">Login</a></li>
+                    <div class="avatar">
+                        <span id="profile-avatar"></span>
+                        <ul class="menu">
+                            <li><a href="./user-profile-settings.html">Profile</a></li>
+                            <li><a href="./user-notifications.html">Notifications</a></li>
+                            <li><a href="./user-account">Account</a></li>
+                            <li id="logout"><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
                 </ul>
                 <div class="toggle-menu" onclick="toggle(this)">
                     <div class="bar1"></div>
@@ -43,89 +52,19 @@
                     <h1>Post</h1>
                 </div>
                 <div>
-                    <p>Calendar - A Simple Editorial Calendar for my site
+                    <p id="post-title">Calendar - A Simple Editorial Calendar for my site
                     </p>
                 </div>
-                <p><span>Side projects</span> / 25th June, 2020</p>
+                <p><span>last updated on <span id="created-at"></span></p>
             </div>
         </div>
 
         <!-- my blog section -->
         <div class="post-section">
             <div class="author-section">
-                <div class="author-profile"><img src="../assets/images/profile.jpg" alt=""></div>
-                <div class="author-social-icons">
-                    <ul class="social-links">
-                        <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
-                                    src="../assets/images/social-icons/fb.jpg" alt="facebook"></a>
-                        </li>
-                        <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
-                                    src="../assets/images/social-icons/twitter.png" alt="twitter"></a>
-                        </li>
-                        <li><a href="mailto:julesntare@gmail.com" target="_blank"><img
-                                    src="../assets/images/social-icons/email.jpg" alt="email"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="author-post-details">
-                    <h3>author:</h3>
-                    <p>Jules NTARE</p>
-                </div>
-                <div class="author-post-details">
-                    <h3>date:</h3>
-                    <p>Aug 03, 2020</p>
-                </div>
-                <div class="author-post-details">
-                    <h3>category:</h3>
-                    <p>Working in Digital</p>
-                </div>
-                <div class="author-post-details">
-                    <h3>about author:</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illo placeat harum
-                        perferendis blanditiis! Tenetur est harum dicta asperiores error iure! Asperiores harum hic
-                        exercitationem quaerat amet tempore laborum est!</p>
-                </div>
-                <div class="post-likes">
-                    <img src="../assets/images/made-love.png" alt="">
-                    <h2>113</h2>
-                </div>
-                <div class="post-share-links">
-                    <div><input type="text" name="post-link" id=""
-                            value="https://julesntare.netlify.app/pages/blog-post.html"><img
-                            src="../assets/images/clipboard.png" /></div>
-                    <div class="copied">Copied to clipboard</div>
-                    <div><a href="#">Share to Facebook</a></div>
-                    <div><a href="#">Share to Twitter</a></div>
-                    <div><a href="#">Share to LinkedIn</a></div>
-                    <div><a href="#">Share to Whatsapp</a></div>
-                </div>
-                <div class="post-shares">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
             <div class="blog-post-container">
                 <div class="post-details">
-                    <div>
-                        <img src="../assets/images/calendar.PNG" alt="">
-                    </div>
-                    <div class="post-paras">
-                        <p>I recently released my first WordPress plugin. Here's what I've learned about building
-                            and
-                            releasing something for free.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda id fuga distinctio
-                            ducimus ipsam laborum dignissimos alias labore atque, harum, similique voluptatem
-                            corporis
-                            eum aliquam ab quibusdam praesentium? Ipsum, doloremque?</p>
-                        <p>I recently released my first WordPress plugin. Here's what I've learned about building
-                            and
-                            releasing something for free.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore et optio in hic quidem
-                            architecto asperiores nemo cum laudantium unde, blanditiis voluptate repellat facere,
-                            cumque
-                            obcaecati suscipit odit velit. Laborum.</p>
-                    </div>
                 </div>
 
                 <div class="comment-section">
@@ -194,6 +133,11 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/blog-post.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
