@@ -1460,28 +1460,6 @@ footer {
 	.success-msg {
 		width: 100%;
 	}
-	.service-container-expanded {
-		flex-direction: column;
-	}
-	.service-container-expanded * {
-		margin-bottom: 20px;
-	}
-	.service-container-expanded:nth-child(even) {
-		flex-direction: column;
-	}
-	.service-container-expanded > div:nth-child(1),
-	.service-container-expanded > div:nth-child(2) {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-	}
-	.service-container-expanded > div * {
-		text-align: center;
-	}
-	.success-msg {
-		width: 100%;
-	}
 	.add-post-container > div {
 		width: 95%;
 	}
