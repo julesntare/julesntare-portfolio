@@ -990,10 +990,8 @@ footer {
 .post-likes {
 	display: block;
 	position: absolute;
-	top: 100;
-	right: 0;
-	z-index: 1;
-	margin: 240px 20px 0 0;
+	top: 800px;
+	left: 95%;
 	cursor: pointer;
 	text-align: center;
 }
@@ -1435,6 +1433,7 @@ footer {
 	}
 	.post-section {
 		flex-direction: column-reverse;
+		margin-top: 40px;
 	}
 	.post-section > div:nth-child(1) {
 		display: flex;
@@ -1479,6 +1478,8 @@ footer {
 		display: none;
 	}
 	.post-likes {
-		display: none;
+		position: absolute;
+		top: 70%;
+		left: 90%;
 	}
 }
