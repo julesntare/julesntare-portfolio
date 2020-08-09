@@ -51,13 +51,14 @@
                     <h1>Post</h1>
                 </div>
                 <div>
-                    <p id="post-title">Calendar - A Simple Editorial Calendar for my site
-                    </p>
+                    <p id="post-title"></p>
                 </div>
                 <p><span>last updated on <span id="created-at"></span></p>
             </div>
         </div>
 
+        <div class="post-likes">
+        </div>
         <!-- my blog section -->
         <div class="post-section">
             <div class="author-section">
@@ -68,9 +69,9 @@
 
                 <div class="comment-section">
                     <h2>Leave a Reply</h2>
-                    <form action="#">
+                    <form action="#" id="add-reply">
                         <div class="form-group">
-                            <textarea name="msg" id="" cols="30" rows="10"></textarea>
+                            <textarea name="msg" id="reply-contents" cols="30" rows="10" required></textarea>
                         </div>
                         <div class="form-group view-more">
                             <button type="submit">Comment</button>
@@ -78,22 +79,8 @@
                     </form>
                 </div>
                 <div class="replies-section">
-                    <span>comments(1)</span>
+                    <span id="replies-counter"></span>
                     <hr />
-                    <div class="comment-user">
-                        <div><img src="../assets/images/profile.jpg" alt=""></div>
-                        <div>
-                            <h3>John Doe</h3>
-                            <span>July 29, 2020 at 2:35 am</span>
-                        </div>
-                    </div>
-                    <div class="view-more">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illo placeat harum
-                            perferendis blanditiis! Tenetur est harum dicta asperiores error iure! Asperiores harum
-                            hic
-                            exercitationem quaerat amet tempore laborum est!</p>
-                        <a href="#">Reply</a>
-                    </div>
                 </div>
             </div>
         </div>
