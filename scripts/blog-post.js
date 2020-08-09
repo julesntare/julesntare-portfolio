@@ -35,6 +35,10 @@ const getPost = (id, data) => {
         perferendis blanditiis! Tenetur est harum dicta asperiores error iure! Asperiores harum hic
         exercitationem quaerat amet tempore laborum est!</p>
 </div>
+<div class="post-likes">
+    <img src="../assets/images/made-love.png" alt="">
+    <h2>113</h2>
+</div>
 <div class="post-share-links">
     <div><input type="text" name="post-link"
             value="https://julesntare.netlify.app/pages/blog-post.html"><img
