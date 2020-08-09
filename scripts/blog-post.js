@@ -52,7 +52,7 @@ const getPost = (id, data) => {
 </div>`;
 	authorContainer.appendChild(authorInfo);
 	postLikes.innerHTML = `<img src="../assets/images/like-img.png" id="like-image" alt="">
-    <h2 id="total-likes">${data.likes}</h2>`;
+    <h2 id="total-likes">${data.likes | 0}</h2>`;
 	postInfo.innerHTML += `<div>
 <img src="${data.imageUrl}" alt="">
 </div>`;
