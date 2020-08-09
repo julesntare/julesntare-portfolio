@@ -1002,7 +1002,7 @@ footer {
 	height: 30px;
 }
 .post-shares {
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	width: 40px;
@@ -1024,6 +1024,7 @@ footer {
 	margin-left: 3px;
 }
 .post-share-links {
+	display: none;
 	width: 250px;
 	min-height: 250px;
 	position: absolute;
@@ -1432,8 +1433,13 @@ footer {
 	.overlay-contents div:nth-child(2) {
 		width: 80%;
 	}
+	.post-section {
+		flex-direction: column-reverse;
+	}
 	.post-section > div:nth-child(1) {
-		display: none;
+		display: flex;
+		width: 100%;
+		margin: 0;
 	}
 	.post-section > div:nth-child(2) {
 		width: 100%;
