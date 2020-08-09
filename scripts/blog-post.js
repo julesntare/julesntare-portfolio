@@ -164,7 +164,7 @@ postLikes.addEventListener('click', () => {
 					likes: firebase.firestore.FieldValue.increment(1),
 				});
 				likeImage.src = '../assets/images/made-love.png';
-				document.querySelector('#total-likes').innerHTML = doc.data().likes + 1;
+				document.querySelector('#total-likes').innerHTML = (doc.data().likes + 1) | 1;
 			}
 			setWithMerge
 				.then((res) => {
