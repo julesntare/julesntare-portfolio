@@ -98,6 +98,7 @@ document.querySelector('#add-reply').addEventListener('submit', (e) => {
 	setWithMerge
 		.then((res) => {
 			console.log('added');
+			window.location.reload();
 		})
 		.catch((err) => console.log(err));
 });
