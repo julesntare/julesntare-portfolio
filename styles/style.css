@@ -488,6 +488,7 @@ button:hover {
 	min-height: 480px;
 	display: flex;
 	flex-direction: column;
+	margin: 0 auto;
 	margin-top: 30px;
 }
 .blog-posts > div:nth-child(2) {
@@ -733,11 +734,12 @@ footer {
 /* hide menu */
 .menu {
 	display: none;
-	width: 250px;
-	height: 120px;
+	width: 200px;
+	min-height: 120px;
 	margin: 30px 0 0 0;
 	position: absolute;
 	top: 10px;
+	right: -20px;
 	background: #0e172d;
 	border-radius: 5px;
 }
@@ -750,6 +752,7 @@ footer {
 	padding: 6px 4px;
 }
 .menu li > a {
+	width: 100%;
 	color: #fff;
 }
 
@@ -954,7 +957,6 @@ footer {
 	min-height: 100%;
 	margin: 10px 0 0 20px;
 	text-align: center;
-	position: relative;
 }
 .post-section > div:nth-child(1) div {
 	margin-bottom: 10px;
@@ -988,14 +990,19 @@ footer {
 	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.7);
 }
 .post-likes {
-	margin-top: 50px;
+	display: block;
+	position: absolute;
+	top: 800px;
+	left: 95%;
+	cursor: pointer;
+	text-align: center;
 }
 .post-likes img {
 	width: 30px;
 	height: 30px;
 }
 .post-shares {
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	width: 40px;
@@ -1017,6 +1024,7 @@ footer {
 	margin-left: 3px;
 }
 .post-share-links {
+	display: none;
 	width: 250px;
 	min-height: 250px;
 	position: absolute;
@@ -1059,6 +1067,7 @@ footer {
 }
 .post-details img {
 	width: 100%;
+	height: 350px;
 }
 .post-paras {
 	margin: 0 50px;
@@ -1112,9 +1121,10 @@ footer {
 }
 .replies-section .view-more {
 	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	margin-top: 10px;
+	margin: 20px 0;
+}
+.replies-section h3 {
+	text-transform: capitalize;
 }
 .replies-section .view-more a {
 	color: #0c1838;
@@ -1312,6 +1322,70 @@ footer {
 .notifications input {
 	cursor: pointer;
 }
+.user-posts {
+	background: none;
+}
+.settings-container .post-contents-container .cards {
+	flex-direction: row;
+}
+.cards > div {
+	background: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+.cards > div * {
+	display: flex;
+	flex-direction: column;
+}
+.post-title {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.post-title a {
+	background-color: #2124ce;
+	color: #fff;
+	padding: 0 5px;
+	border-radius: 5px;
+}
+.post-lists {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #fff;
+	min-height: 100%;
+	border-bottom: 1px solid rgb(204, 199, 199);
+}
+.post-lists .state {
+	background-color: #0fb409;
+	color: #fff;
+	padding: 0 5px;
+	border-radius: 5px;
+}
+.post-lists .actions {
+	display: flex;
+	justify-content: space-evenly;
+	width: 130px;
+}
+.post-lists .actions a:nth-child(1) {
+	color: #e40a0a;
+}
+.post-lists .actions a:nth-child(2) {
+	color: #1c0f91;
+}
+.toggle-profile-menu {
+	display: none;
+	cursor: pointer;
+}
+
+.toggle-profile-menu > div {
+	width: 30px;
+	height: 4px;
+	background-color: #222;
+	margin: 6px 20px;
+	border-radius: 1000px;
+	transition: 0.4s;
+}
 
 /* media queries */
 @media (max-width: 740px) {
@@ -1423,8 +1497,14 @@ footer {
 	.overlay-contents div:nth-child(2) {
 		width: 80%;
 	}
+	.post-section {
+		flex-direction: column-reverse;
+		margin-top: 40px;
+	}
 	.post-section > div:nth-child(1) {
-		display: none;
+		display: flex;
+		width: 100%;
+		margin: 0;
 	}
 	.post-section > div:nth-child(2) {
 		width: 100%;
@@ -1461,6 +1541,50 @@ footer {
 		width: 100%;
 	}
 	.user-sidebar {
+		width: 10%;
+		height: 300px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.user-sidebar ul {
 		display: none;
+	}
+	.toggle-profile-menu {
+		display: block;
+		margin-left: 10px;
+	}
+	.toggle-profile-menu > div {
+		margin: 6px 0;
+	}
+	.user-sidebar ul.profile-change {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: 0;
+		left: 8%;
+		width: 40%;
+		background: #fff;
+		padding: 0.25em;
+		margin: 0;
+		margin-top: 190px;
+		z-index: 999;
+	}
+	.settings-container .post-contents-container .cards {
+		width: 95%;
+		flex-direction: column;
+		margin: 0 5px;
+	}
+	.cards > div {
+		margin-bottom: 20px;
+	}
+
+	.settings-container .post-contents-container .posts-table {
+		width: 95%;
+		margin: 0 5px;
+  }
+	.post-likes {
+		position: absolute;
+		top: 70%;
+		left: 90%;
 	}
 }
