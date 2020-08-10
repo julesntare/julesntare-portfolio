@@ -1,11 +1,9 @@
 let totalPosts = document.querySelector('#total-posts');
-let accountName = document.querySelector('#account-name');
 let postTable = document.querySelector('.posts-table');
 let postListDiv, titleDiv, stateDiv, actionsDiv, deleteLink, editLink;
 
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
-		accountName.innerHTML = '@' + user.email.split('@')[0];
 		db.collection('posts')
 			.where('author', '==', user.email)
 			.get()
