@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account settings | Jules NTARE</title>
+    <title>New-Post | Jules NTARE</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
@@ -48,15 +48,15 @@
     <section>
         <div class="add-post-container">
             <div class="top-intro">
-                <h1>Settings for @julesntare</h1>
+                <h1>Settings for <span id="account-name"></span></h1>
             </div>
             <div class="settings-container">
                 <div class="user-sidebar">
                     <ul>
-                        <li><a href="./user-posts.html">Posts</a></li>
+                        <li class="active"><a href="./user-posts.html">Posts</a></li>
                         <li><a href="./user-profile-settings.html">Profile</a></li>
                         <li><a href="./user-notifications.html">Notifications</a></li>
-                        <li class="active"><a href="./user-account.html">Account</a></li>
+                        <li><a href="./user-account.html">Account</a></li>
                     </ul>
                     <div class="toggle-profile-menu" onclick="toggleProfile(this)">
                         <div class="bar1"></div>
@@ -65,26 +65,21 @@
                     </div>
                 </div>
                 <div>
-                    <div class="post-contents-container">
-                        <h2>Set New Password</h2>
-                        <div><label for="">Password</label><input type="password"></div>
-                        <div><label for="">Confirm new password</label><input type="password"></div>
-                        <div class="view-more">
-                            <button>Set New Password</button>
+                    <div class="post-contents-container user-posts">
+                        <div class="cards">
+                            <div>
+                                <span id="total-posts"></span>
+                                <span>Total Posts</span>
+                            </div>
+                            <div>
+                                <span id="total-entries">0</span>
+                                <span>Total Entries</span></div>
                         </div>
-                    </div>
-                    <div class="post-contents-container">
-                        <h2 class="danger">Danger Zone</h2>
-                        <span class="text-bold">Delete Account</span>
-                        <span>Deleting your account will:</span>
-                        <ul>
-                            <li>delete your profile, along with your authentication associations. </li>
-                            <li>delete any and all content you have, such as articles, comments, your reading list or
-                                chat messages.</li>
-                            <li>allow your username to become available to anyone.</li>
-                        </ul>
-                        <div class="view-more bg-danger">
-                            <button>Delete Account</button>
+                        <div class="posts-table">
+                            <div class="post-title">
+                                <h1>Posts</h1>
+                                <a href="./new-post.html">Add New Post</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -124,6 +119,11 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/userPosts.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
