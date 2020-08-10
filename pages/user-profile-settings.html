@@ -48,7 +48,7 @@
     <section>
         <div class="add-post-container">
             <div class="top-intro">
-                <h1>Settings for @julesntare</h1>
+                <h1>Settings for <span id="account-name"></span></h1>
             </div>
             <div class="settings-container">
                 <div class="user-sidebar">
@@ -66,21 +66,22 @@
                 </div>
                 <div>
                     <div class="post-contents-container">
-                        <div><label for="">Email</label><input type="email"></div>
-                        <div><label for="">Name</label><input type="text"></div>
+                        <div><label for="">Email</label><input type="email" id="email"></div>
+                        <div><label for="">First Name</label><input type="text" id="fname"></div>
+                        <div><label for="">Last Name</label><input type="text" id="lname"></div>
                         <div><label for=""></label>
                             <div class="profile">
-                                <img src="../assets//images/profile.jpg" alt="">
-                                <input type="file">
+                                <img src="../assets//images/profile.jpg" id="current-profile" alt="">
+                                <input type="file" id="profile-img">
                             </div>
                         </div>
-                        <div><label for="">A short bio</label><textarea name="" id="" cols="30" rows="10"></textarea>
+                        <div><label for="">A short bio</label><textarea name="" id="bio" cols="30" rows="10"></textarea>
                         </div>
-                        <div><label for="">Location</label><input type="text"></div>
+                        <div><label for="">Location</label><input type="text" id="my-location"></div>
                         <div><label for="">social Links</label><input type="text"></div>
                     </div>
                     <div class="actions">
-                        <button>Save</button>
+                        <button id="submit-update">Save</button>
                     </div>
                 </div>
             </div>
@@ -122,7 +123,10 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/userProfile.js"></script>
+    <script src="../scripts/userProfileSettings.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
