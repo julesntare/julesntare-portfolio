@@ -47,7 +47,7 @@ submitUpdate.addEventListener('click', (e) => {
 						img: downloadURL,
 					})
 					.then(() => {
-						console.log('Document successfully updated!');
+						window.location.reload();
 					})
 					.catch((error) => {
 						console.error('Error updating document: ', error);
