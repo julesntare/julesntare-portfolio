@@ -771,7 +771,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	width: 70%;
-	font-size: 24px;
+	font-size: 20px;
 	background-color: rgb(18, 80, 23);
 	border-radius: 3px;
 	margin: 0 auto;
@@ -794,7 +794,7 @@ footer {
 .login-container {
 	min-height: 60vh;
 	width: 50%;
-	margin: 33px auto;
+	margin: 10px auto;
 	background: linear-gradient(180deg, #182952 39.06%, rgba(59, 110, 233, 0) 100%);
 	box-shadow: 0px 0px 10px #172854;
 	display: flex;
