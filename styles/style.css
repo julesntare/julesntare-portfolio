@@ -778,7 +778,8 @@ footer {
 	color: #fff;
 	animation: appear 0.4s;
 }
-.post-contents-container .password-msg {
+.post-contents-container .password-msg,
+.post-contents-container .pass-error-msg {
 	display: none;
 	background-color: #e02d2d;
 	font-size: 20px;
