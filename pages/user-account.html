@@ -53,7 +53,7 @@
             <div class="settings-container">
                 <div class="user-sidebar">
                     <ul>
-                        <li><a href="./user-posts.html">Posts</a></li>
+                        <li><a href="./user-posts.html">Dashboard</a></li>
                         <li><a href="./user-profile-settings.html">Profile</a></li>
                         <li><a href="./user-notifications.html">Notifications</a></li>
                         <li class="active"><a href="./user-account.html">Account</a></li>
@@ -65,12 +65,15 @@
                     </div>
                 </div>
                 <div>
+
                     <div class="post-contents-container">
+                        <span class="pass-error-msg"></span>
                         <h2>Set New Password</h2>
-                        <div><label for="">Password</label><input type="password"></div>
-                        <div><label for="">Confirm new password</label><input type="password"></div>
+                        <div><label for="">Current Password</label><input type="password" id="curr-pass"></div>
+                        <div><label for="">New Password</label><input type="password" id="new-pass"></div>
+                        <div><label for="">Confirm new password</label><input type="password" id="cpass"></div>
                         <div class="view-more">
-                            <button>Set New Password</button>
+                            <button id="save-password">Set New Password</button>
                         </div>
                     </div>
                     <div class="post-contents-container">
@@ -84,7 +87,7 @@
                             <li>allow your username to become available to anyone.</li>
                         </ul>
                         <span class="password-msg"></span>
-                        <input type="password" id="curr-password" placeholder="Current Password" />
+                        <input type="password" id="curr-password" placeholder="Enter Password to Proceed" />
                         <div class="view-more bg-danger">
                             <button id="delete-account">Delete Account</button>
                         </div>
@@ -132,6 +135,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
     <script src="../scripts/userProfile.js"></script>
+    <script src="../scripts/user-account.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
