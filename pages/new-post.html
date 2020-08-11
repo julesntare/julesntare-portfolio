@@ -27,6 +27,15 @@
                     <li><a href="./contact.html">contact me</a></li>
                     <li><a href="./about.html">about me</a></li>
                     <li class="active"><a href="./blog.html">blog</a></li>
+                    <li id="login-box"><a href="./login.html" class="login-link">Login</a></li>
+                    <div class="avatar">
+                        <span id="profile-avatar"></span>
+                        <ul class="menu">
+                            <li><a href="./new-post.html">Dashboard</a></li>
+                            <li><a href="./user-posts.html">Settings</a></li>
+                            <li id="logout"><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
                 </ul>
                 <div class="toggle-menu" onclick="toggle(this)">
                     <div class="bar1"></div>
@@ -40,7 +49,7 @@
         <div class="top-intro">
             <div>
                 <h2>New Post</h2>
-                <button>Close</button>
+                <button id="close-page">Close</button>
             </div>
             <div>
                 <a href="#" class="active">Edit</a>
@@ -52,19 +61,15 @@
                 <label for="file-upload" class="custom-file-upload">
                     Add Cover Image
                 </label>
-                <input type="file" name="" id="file-upload">
-            </div> <input type="text" name="" id="" placeholder="New Post title here...">
-            <div>
-                <label for="file-upload" class="custom-file-upload">
-                    <i class="fa fa-cloud-upload"></i> Upload Image
-                </label>
-                <input type="file" name="" id="file-upload">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Write your post content here..."></textarea>
+                <input type="file" name="" accept="image/*" capture="camera" id="file-upload">
+                <span id="image-name"></span>
+            </div> <input type="text" name="" id="post-title" placeholder="New Post title here...">
+            <textarea name="" id="post-contents" cols="30" rows="10"
+                placeholder="Write your post content here..."></textarea>
         </div>
         <div class="actions">
-            <button>Publish</button>
-            <button>save draft</button>
+            <button id="publish">Publish</button>
+            <button id="save-draft">save draft</button>
         </div>
     </div>
     <footer>
@@ -101,6 +106,13 @@
         <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
             Jules NTARE. All rights reserved.</div>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
+    <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/userProfile.js"></script>
+    <script src="../scripts/new-post.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
