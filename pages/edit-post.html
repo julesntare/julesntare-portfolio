@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification settings | Jules NTARE</title>
+    <title>New-Post | Jules NTARE</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
@@ -29,10 +29,10 @@
                     <li class="active"><a href="./blog.html">blog</a></li>
                     <li id="login-box"><a href="./login.html" class="login-link">Login</a></li>
                     <div class="avatar">
-                        <span id="profile-avatar"></span>
+                        <span id="profile-avatar">u</span>
                         <ul class="menu">
-                            <li><a href="./new-post.html">Dashboard</a></li>
-                            <li><a href="./user-profile-settings.html">Settings</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Settings</a></li>
                             <li id="logout"><a href="#">Logout</a></li>
                         </ul>
                     </div>
@@ -45,43 +45,30 @@
             </nav>
         </div>
     </header>
-    <section>
-        <div class="add-post-container">
-            <div class="top-intro">
-                <h1>Settings for <span id="account-name"></span></h1>
+    <div class="add-post-container">
+        <div class="top-intro">
+            <div>
+                <h2>Edit Post</h2>
+                <button id="close-page">Close</button>
             </div>
-            <div class="settings-container">
-                <div class="user-sidebar">
-                    <ul>
-                        <li><a href="./user-posts.html">Dashboard</a></li>
-                        <li><a href="./user-profile-settings.html">Profile</a></li>
-                        <li class="active"><a href="./user-notifications.html">Notifications</a></li>
-                        <li><a href="./user-account.html">Account</a></li>
-                    </ul>
-                    <div class="toggle-profile-menu" onclick="toggleProfile(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </div>
-                <div>
-                    <div class="post-contents-container notifications">
-                        <h2>Email Notifications Settings</h2>
-                        <div><input type="checkbox" checked><label for="">Send me weekly newsletter emails</label></div>
-                        <div><input type="checkbox" checked><label for="">Send me an email when someone replies to me in
-                                a comment thread</label></div>
-                        <div><input type="checkbox" checked><label for="">Send me an email when someone mentions
-                                me</label></div>
-                        <div><input type="checkbox" checked><label for="">Send me occasional reminders that I have
-                                unread notifications</label></div>
-                        <div><input type="checkbox" checked><label for="">Notify me when someone reach me</label></div>
-                        <div class="actions">
-                            <button>save</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
+        </div>
+        <div class="post-contents-container">
+            <div>
+                <img src="" class="edit-image" alt="">
+                <label for="file-upload" class="custom-file-upload">
+                    Update Cover Image
+                </label>
+                <input type="file" name="" accept="image/*" capture="camera" id="file-upload">
+                <span id="image-name"></span>
+            </div> <input type="text" name="" id="post-title" placeholder="New Post title here...">
+            <textarea name="" id="post-contents" cols="30" rows="10"
+                placeholder="Write your post content here..."></textarea>
+        </div>
+        <div class="actions">
+            <button id="update">Update</button>
+            <button id="cancel">Cancel</button>
+        </div>
+    </div>
     <footer>
         <div class="upper-footer">
             <div class="left-side">
@@ -121,7 +108,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/userProfile.js"></script>
+    <script src="../scripts/edit-post.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 

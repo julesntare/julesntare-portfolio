@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification settings | Jules NTARE</title>
+    <title>New-Post | Jules NTARE</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
@@ -53,9 +53,9 @@
             <div class="settings-container">
                 <div class="user-sidebar">
                     <ul>
-                        <li><a href="./user-posts.html">Dashboard</a></li>
+                        <li class="active"><a href="./user-posts.html">Dashboard</a></li>
                         <li><a href="./user-profile-settings.html">Profile</a></li>
-                        <li class="active"><a href="./user-notifications.html">Notifications</a></li>
+                        <li><a href="./user-notifications.html">Notifications</a></li>
                         <li><a href="./user-account.html">Account</a></li>
                     </ul>
                     <div class="toggle-profile-menu" onclick="toggleProfile(this)">
@@ -65,18 +65,21 @@
                     </div>
                 </div>
                 <div>
-                    <div class="post-contents-container notifications">
-                        <h2>Email Notifications Settings</h2>
-                        <div><input type="checkbox" checked><label for="">Send me weekly newsletter emails</label></div>
-                        <div><input type="checkbox" checked><label for="">Send me an email when someone replies to me in
-                                a comment thread</label></div>
-                        <div><input type="checkbox" checked><label for="">Send me an email when someone mentions
-                                me</label></div>
-                        <div><input type="checkbox" checked><label for="">Send me occasional reminders that I have
-                                unread notifications</label></div>
-                        <div><input type="checkbox" checked><label for="">Notify me when someone reach me</label></div>
-                        <div class="actions">
-                            <button>save</button>
+                    <div class="post-contents-container user-posts">
+                        <div class="cards">
+                            <div>
+                                <span id="total-posts"></span>
+                                <span>Total Posts</span>
+                            </div>
+                            <div>
+                                <span id="total-entries">0</span>
+                                <span>Total Entries</span></div>
+                        </div>
+                        <div class="posts-table">
+                            <div class="post-title">
+                                <h1>Posts</h1>
+                                <a href="./new-post.html">Add New Post</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,6 +124,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/userPosts.js"></script>
     <script src="../scripts/userProfile.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
