@@ -16,9 +16,12 @@ const getPost = async (id, data) => {
 	authorRef.docs.forEach((doc) => {
 		authorData = doc.data();
 	});
-	authorInfo.innerHTML = `<div class="author-profile"><img src="${
-		authorData.img != undefined ? authorData.img : ''
-	}" alt="no profile"></div>
+	authorInfo.innerHTML = `<div class="author-profile">${
+		authorData.img != undefined
+			? `<img src=${authorData.img} alt='no profile' />`
+			: `<div class="author-avatar">${authorData.author.split('')[0]}</div>`
+	}
+	</div>
 <div class="author-social-icons">
 	<ul class="social-links">
         <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
@@ -137,15 +140,20 @@ const getReplies = (postId) => {
 							querySnapshot.forEach((doc) => {
 								let replyDetails = document.createElement('div');
 								replyDetails.innerHTML = `<div class="comment-user">
-    <div><img src="../assets/images/profile.jpg" alt=""></div>
-    <div>
-        <h3>${doc.data().firstname} ${doc.data().lastname}</h3>
-        <span>${comment['replied-at'].toDate().toString().split('G')[0]}</span>
-    </div>
-</div>
-<div class="view-more">
-    <p>${comment.contents}</p>
-</div>`;
+										<div>
+										${
+											doc.data().img != null
+												? `<img src=${doc.data().img} alt="">`
+												: `<div class="author-avatar">${doc.data().email.split('')[0]}</div>`
+										}</div>
+										<div>
+											<h3>${doc.data().firstname} ${doc.data().lastname}</h3>
+											<span>${comment['replied-at'].toDate().toString().split('G')[0]}</span>
+										</div>
+									</div>
+									<div class="view-more">
+										<p>${comment.contents}</p>
+									</div>`;
 								replySection.appendChild(replyDetails);
 							});
 						});
