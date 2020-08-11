@@ -20,6 +20,8 @@ firebase.auth().onAuthStateChanged((user) => {
 			.catch((error) => {
 				console.log('Error getting documents: ', error);
 			});
+	} else {
+		window.location.href = './login.html';
 	}
 });
 

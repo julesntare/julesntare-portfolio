@@ -7,6 +7,8 @@ firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
 		accountName.innerHTML = '@' + user.email.split('@')[0];
 		userDetails = user.email;
+	} else {
+		window.location.href = './login.html';
 	}
 });
 
