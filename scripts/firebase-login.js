@@ -77,6 +77,6 @@ document.querySelector('#googleAuth').addEventListener('click', (e) => {
 // check auth state
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
-		window.location.href = '../pages/blog.html';
+		// window.location.href = '../pages/blog.html';
 	}
 });
