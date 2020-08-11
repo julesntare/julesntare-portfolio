@@ -21,3 +21,9 @@ function toggle(x) {
 	x.classList.toggle('change');
 	elMenu.classList.toggle('change');
 }
+
+function toggleProfile(x) {
+	profileMenu = document.querySelector('.user-sidebar ul');
+	x.classList.toggle('profile-change');
+	profileMenu.classList.toggle('profile-change');
+}
