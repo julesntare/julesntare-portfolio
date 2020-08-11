@@ -21,12 +21,14 @@ function saveMessage(fname, lname, email, pswd) {
 		.auth()
 		.createUserWithEmailAndPassword(email, pswd)
 		.then((user) => {
-			console.log(user.id);
 			db.collection('users')
-				.doc(user.id)
+				.doc(user.user.uid)
 				.set({
 					firstname: fname,
 					lastname: lname,
+					email: email,
+					img: null,
+					noOfEntries: 1,
 				})
 				.then((docRef) => {
 					document.querySelector('.success-msg').style.display = 'flex';
@@ -35,7 +37,7 @@ function saveMessage(fname, lname, email, pswd) {
 					}, 3500);
 					document.querySelector('#signUpForm').reset();
 				})
-				.catch(function (error) {
+				.catch((error) => {
 					console.error('Error adding document: ', error);
 				});
 		})
@@ -43,3 +45,51 @@ function saveMessage(fname, lname, email, pswd) {
 			console.log(error);
 		});
 }
+
+// google authentication
+document.querySelector('#googleAuth').addEventListener('click', (e) => {
+	var googleProvider = new firebase.auth.GoogleAuthProvider();
+	firebase
+		.auth()
+		.signInWithPopup(googleProvider)
+		.then((result) => {
+			let docRef = db.collection('users').doc(result.user.uid);
+			if (result.additionalUserInfo.isNewUser) {
+				docRef
+					.set({
+						firstname: result.user.displayName.split(' ')[0],
+						lastname: result.user.displayName.split(' ')[1],
+						email: result.user.email,
+						img: result.user.photoURL,
+						noOfEntries: firebase.firestore.FieldValue.increment(1),
+					})
+					.then(() => {
+						window.location.href = '../pages/blog.html';
+					})
+					.catch((error) => {
+						console.error('Error writing document: ', error);
+					});
+			} else {
+				docRef
+					.update({
+						noOfEntries: firebase.firestore.FieldValue.increment(1),
+					})
+					.then(() => {
+						window.location.href = '../pages/blog.html';
+					})
+					.catch((error) => {
+						console.error('Error writing document: ', error);
+					});
+			}
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+});
+
+// check auth state
+firebase.auth().onAuthStateChanged((user) => {
+	if (user) {
+		window.location.href = '../pages/blog.html';
+	}
+});
