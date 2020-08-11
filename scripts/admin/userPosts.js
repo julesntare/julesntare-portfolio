@@ -59,3 +59,23 @@ const getPost = (id, data) => {
 	});
 	return postListDiv;
 };
+
+// check auth state
+firebase.auth().onAuthStateChanged((user) => {
+	if (user) {
+		let docRef = db.collection('users').doc(user.uid);
+		docRef
+			.get()
+			.then((doc) => {
+				if (doc.exists && doc.data().level == 1) {
+					return true;
+				}
+				window.location.href = '../pages/blog.html';
+			})
+			.catch((error) => {
+				console.log('Error getting document:', error);
+			});
+	} else {
+		window.location.href = '../pages/blog.html';
+	}
+});
