@@ -15,44 +15,55 @@ firebase.auth().onAuthStateChanged((user) => {
 			.get()
 			.then((doc) => {
 				if (doc.exists) {
-					email.value = doc.data().email != undefined ? doc.data().email : null;
+					email.value = user.email;
 					fname.value = doc.data().firstname != undefined ? doc.data().firstname : null;
 					lname.value = doc.data().lastname != undefined ? doc.data().lastname : null;
 					currentProfile.src = doc.data().img != undefined ? doc.data().img : '';
 					bio.value = doc.data().bio != undefined ? doc.data().bio : null;
 					myLocation.value = doc.data().location != undefined ? doc.data().location : null;
+				} else {
+					email.value = user.email;
 				}
 			})
 			.catch((error) => {
 				console.log('Error getting document:', error);
 			});
+	} else {
+		window.location.href = './login.html';
 	}
 });
 
 submitUpdate.addEventListener('click', (e) => {
+	let downloadUrl = null;
 	if (profileImg.files.length > 0) {
-		let downloadURL;
 		storageRef = storage.ref('images/' + profileImg.files[0].name);
 		uploadImage = storageRef.put(profileImg.files[0]);
 		uploadImage.on('state_changed', async (snapshot) => {
 			if (snapshot.bytesTransferred == snapshot.totalBytes) {
-				downloadURL = await snapshot.ref.getDownloadURL();
-				docRef
-					.update({
-						email: email.value,
-						firstname: fname.value,
-						lastname: lname.value,
-						bio: bio.value,
-						location: myLocation.value,
-						img: downloadURL,
-					})
-					.then(() => {
-						window.location.reload();
-					})
-					.catch((error) => {
-						console.error('Error updating document: ', error);
-					});
+				downloadUrl = await snapshot.ref.getDownloadURL();
+				updateData(downloadUrl);
 			}
 		});
+	} else {
+		updateData();
 	}
+	console.log(downloadUrl);
 });
+
+const updateData = (url = null) => {
+	docRef
+		.update({
+			email: email.value,
+			firstname: fname.value,
+			lastname: lname.value,
+			bio: bio.value,
+			location: myLocation.value,
+			img: url,
+		})
+		.then(() => {
+			window.location.reload();
+		})
+		.catch((error) => {
+			console.error('Error updating document: ', error);
+		});
+};
