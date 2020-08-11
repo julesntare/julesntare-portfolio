@@ -1,3 +1,6 @@
+let successMsg = document.querySelector('.success-msg');
+let errorMsg = document.querySelector('.error-msg');
+
 // listen for signup form submission
 document.querySelector('#signUpForm').addEventListener('submit', submitForm);
 function submitForm(e) {
@@ -7,16 +10,35 @@ function submitForm(e) {
 	let lName = getInputVal('lastName');
 	let email = getInputVal('email');
 	let pswd = getInputVal('password');
-	saveMessage(fName, lName, email, pswd);
+	let cpswd = getInputVal('cpassword');
+	if (pswd != cpswd) {
+		errorMsg.style.display = 'flex';
+		errorMsg.innerHTML = "Password don't match";
+	} else {
+		db.collection('users')
+			.where('email', '==', email)
+			.get()
+			.then((querySnapshot) => {
+				if (querySnapshot.docs.length == 1) {
+					errorMsg.style.display = 'flex';
+					errorMsg.innerHTML = 'Email Already Exists';
+				} else {
+					saveUser(fName, lName, email, pswd);
+				}
+			})
+			.catch((error) => {
+				console.log('Error getting documents: ', error);
+			});
+	}
 }
 
 // function to get ids of inputs
-function getInputVal(id) {
+const getInputVal = (id) => {
 	return document.querySelector(`#${id}`).value;
-}
+};
 
-// save message to firebase
-function saveMessage(fname, lname, email, pswd) {
+// save user to firebase
+const saveUser = (fname, lname, email, pswd) => {
 	firebase
 		.auth()
 		.createUserWithEmailAndPassword(email, pswd)
@@ -27,15 +49,17 @@ function saveMessage(fname, lname, email, pswd) {
 					firstname: fname,
 					lastname: lname,
 					email: email,
+					level: 2,
 					img: null,
 					noOfEntries: 1,
 				})
-				.then((docRef) => {
-					document.querySelector('.success-msg').style.display = 'flex';
+				.then(() => {
+					errorMsg.style.display = 'none';
+					successMsg.style.display = 'flex';
+					successMsg.innerHTML = 'Thank you for joining My Blog';
 					setTimeout(() => {
-						document.querySelector('.success-msg').style.display = 'none';
-						window.location.href = '../pages/login.html';
-					}, 1500);
+						window.location.href = '../pages/blog.html';
+					}, 2500);
 					document.querySelector('#signUpForm').reset();
 				})
 				.catch((error) => {
@@ -43,9 +67,10 @@ function saveMessage(fname, lname, email, pswd) {
 				});
 		})
 		.catch((error) => {
-			console.log(error);
+			errorMsg.style.display = 'flex';
+			errorMsg.innerHTML = error.message;
 		});
-}
+};
 
 // google authentication
 document.querySelector('#googleAuth').addEventListener('click', (e) => {
