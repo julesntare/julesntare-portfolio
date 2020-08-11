@@ -53,8 +53,8 @@
             <div class="settings-container">
                 <div class="user-sidebar">
                     <ul>
-                        <li><a href="./user-posts.html">Posts</a></li>
-                        <li class="active"><a href="./user-profile-settings.html">Profile</a></li>
+                        <li class="active"><a href="./user-posts.html">Posts</a></li>
+                        <li><a href="./user-profile-settings.html">Profile</a></li>
                         <li><a href="./user-notifications.html">Notifications</a></li>
                         <li><a href="./user-account.html">Account</a></li>
                     </ul>
@@ -65,23 +65,22 @@
                     </div>
                 </div>
                 <div>
-                    <div class="post-contents-container">
-                        <div><label for="">Email</label><input type="email" id="email"></div>
-                        <div><label for="">First Name</label><input type="text" id="fname"></div>
-                        <div><label for="">Last Name</label><input type="text" id="lname"></div>
-                        <div><label for=""></label>
-                            <div class="profile">
-                                <img src="" id="current-profile" alt="">
-                                <input type="file" id="profile-img">
+                    <div class="post-contents-container user-posts">
+                        <div class="cards">
+                            <div>
+                                <span id="total-posts"></span>
+                                <span>Total Posts</span>
+                            </div>
+                            <div>
+                                <span id="total-entries">0</span>
+                                <span>Total Entries</span></div>
+                        </div>
+                        <div class="posts-table">
+                            <div class="post-title">
+                                <h1>Posts</h1>
+                                <a href="./new-post.html">Add New Post</a>
                             </div>
                         </div>
-                        <div><label for="">A short bio</label><textarea name="" id="bio" cols="30" rows="10"></textarea>
-                        </div>
-                        <div><label for="">Location</label><input type="text" id="my-location"></div>
-                        <div><label for="">social Links</label><input type="text"></div>
-                    </div>
-                    <div class="actions">
-                        <button id="submit-update">Save</button>
                     </div>
                 </div>
             </div>
@@ -125,8 +124,8 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/userPosts.js"></script>
     <script src="../scripts/userProfile.js"></script>
-    <script src="../scripts/userProfileSettings.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
