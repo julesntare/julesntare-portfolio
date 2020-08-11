@@ -776,6 +776,20 @@ footer {
 	color: rgb(18, 80, 23);
 	animation: appear 0.4s;
 }
+.author-avatar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70px;
+	height: 70px;
+	background: #0e172d;
+	color: #fff;
+	font-size: 40px;
+	font-weight: bold;
+	border-radius: 50%;
+	border: 4px solid #213464;
+	margin: 0 auto;
+}
 @keyframes appear {
 	from {
 		height: 0;
