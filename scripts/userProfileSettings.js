@@ -28,6 +28,8 @@ firebase.auth().onAuthStateChanged((user) => {
 			.catch((error) => {
 				console.log('Error getting document:', error);
 			});
+	} else {
+		window.location.href = './login.html';
 	}
 });
 
