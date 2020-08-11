@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts List | Admin</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="at-bottom">
+            <div class="brand-name">
+                <a href="../index.html">
+                    <h1>jules</h1>
+                    <div class="bottom-underline"></div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../pages/projects.html">projects</a></li>
+                    <li><a href="../pages/services.html">services</a></li>
+                    <li><a href="../pages/contact.html">contact me</a></li>
+                    <li><a href="../pages/about.html">about me</a></li>
+                    <li class="active"><a href="../pages/blog.html">blog</a></li>
+                    <li id="login-box"><a href="../pages/login.html" class="login-link">Login</a></li>
+                    <div class="avatar">
+                        <span id="profile-avatar"></span>
+                        <ul class="menu">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li id="logout"><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </ul>
+                <div class="toggle-menu" onclick="toggle(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="add-post-container">
+            <div class="top-intro">
+                <h1>Settings for @Admin</h1>
+            </div>
+            <div class="settings-container">
+                <div class="user-sidebar">
+                    <ul>
+                        <li><a href="./index.html">Dashboard</a></li>
+                        <li><a href="./user-list.html">Users</a></li>
+                        <li class="active"><a href="./user-posts.html">Posts</a></li>
+                        <li><a href="./user-messages.html">Messages</a></li>
+                    </ul>
+                    <div class="toggle-profile-menu" onclick="toggleProfile(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="post-contents-container user-posts">
+                        <div class="posts-table">
+                            <div class="post-title">
+                                <h1>Posts</h1>
+                                <a href="./new-post.html">Add New Post</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="upper-footer">
+            <div class="left-side">
+                <div>
+                    <h1>let's work together</h1>
+                </div>
+                <div>
+                    <p>Have a project you'd like to discuss</p>
+                </div>
+                <div><a href="../pages/contact.html"><button>Let's connect</button></a></div>
+            </div>
+            <div class="right-side">
+                <ul class="social-links">
+                    <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
+                                src="../assets/images/social-icons/fb.jpg" alt="facebook"></a>
+                        <span>julesntare</span>
+                    </li>
+                    <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
+                                src="../assets/images/social-icons/twitter.png" alt="twitter"></a>
+                        <span>@julesntare</span></li>
+                    <li><a href="mailto:julesntare@gmail.com" target="_blank"><img
+                                src="../assets/images/social-icons/email.jpg" alt="email"></a>
+                        <span>julesntare@gmail.com</span>
+                    </li>
+                    <li><a href="https://www.instagram.com/j.ntare/" target="_blank"><img
+                                src="../assets/images/social-icons/instagram.jpg" alt="instagram"></a>
+                        <span>julesntare</span></li>
+                    <li><a href="tel:+250780674459"><img src="../assets/images/social-icons/whatsapp.jpg"
+                                alt="phone"></a> <span>+250 780 674 459</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div>
+            by
+            Jules NTARE. All rights reserved.</div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
+    <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/admin/userPosts.js"></script>
+    <script src="../scripts/scripts.js"></script>
+</body>
+
+</html>
