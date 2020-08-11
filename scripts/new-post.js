@@ -20,6 +20,8 @@ fileUpload.addEventListener('change', (e) => {
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
 		author = user.email;
+	} else {
+		window.location.href = './login.html';
 	}
 });
 publish.addEventListener('click', (e) => {
