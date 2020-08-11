@@ -44,7 +44,7 @@ function saveMessage(fname, lname, email, pswd) {
 		})
 		.catch((error) => {
 			console.log(error);
-		});
+  }
 }
 
 // google authentication
