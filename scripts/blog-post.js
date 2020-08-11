@@ -5,15 +5,22 @@ let postInfo = document.createElement('div');
 let postTitle = document.querySelector('#post-title');
 let createdAt = document.querySelector('#created-at');
 let postLikes = document.querySelector('.post-likes');
+let userEmail, authorData;
 
-const getPost = (id, data) => {
+const getPost = async (id, data) => {
 	let d = data['created-at'].toDate();
 	d = d.toString().split(' ').slice(1, 4);
 	postTitle.innerHTML = data.title;
 	createdAt.innerHTML = `${d[1]}th ${d[0]}, ${d[2]}`;
-	authorInfo.innerHTML = `<div class="author-profile"><img src="../assets/images/profile.jpg" alt=""></div>
+	let authorRef = await db.collection('users').where('email', '==', data.author).get();
+	authorRef.docs.forEach((doc) => {
+		authorData = doc.data();
+	});
+	authorInfo.innerHTML = `<div class="author-profile"><img src="${
+		authorData.img != undefined ? authorData.img : ''
+	}" alt="no profile"></div>
 <div class="author-social-icons">
-    <ul class="social-links">
+	<ul class="social-links">
         <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
                     src="../assets/images/social-icons/fb.jpg" alt="facebook"></a>
         </li>
@@ -27,13 +34,15 @@ const getPost = (id, data) => {
 </div>
 <div class="author-post-details">
     <h3>author:</h3>
-    <p>${data.author}</p>
+    <p>${
+		authorData.firstname != undefined || authorData.lastname != undefined
+			? authorData.firstname + ' ' + authorData.lastname
+			: data.author
+	}</p>
 </div>
 <div class="author-post-details">
     <h3>about author:</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illo placeat harum
-        perferendis blanditiis! Tenetur est harum dicta asperiores error iure! Asperiores harum hic
-        exercitationem quaerat amet tempore laborum est!</p>
+    <p>${authorData.bio != undefined ? authorData.bio : 'N/A'}</p>
 </div>
 <div class="post-share-links">
     <div><input type="text" name="post-link"
@@ -76,10 +85,12 @@ const init = async () => {
 };
 
 // get user data
-let userEmail;
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
 		userEmail = user.email;
+	} else {
+		alert('you have to login to continue');
+		window.location.href = './login.html';
 	}
 });
 
