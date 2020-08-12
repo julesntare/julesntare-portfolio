@@ -880,10 +880,34 @@ footer {
 	align-items: center;
 }
 .login-with {
-	width: 100%;
+	width: 80%;
 	height: 30px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	border: 1px solid #666;
+	border-radius: 6px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.login-with:hover {
+	background: #777;
+}
+.login-with img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-left: 35px;
+}
+.login-with span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 4;
+	width: 60%;
+	font-size: 20px;
+	font-weight: bolder;
+	height: 100%;
 }
 .login-with .social-links {
 	justify-content: space-evenly;
