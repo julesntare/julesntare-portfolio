@@ -1,9 +1,21 @@
 let totalPosts = document.querySelector('#total-posts');
+let totalEntries = document.querySelector('#total-entries');
 let postTable = document.querySelector('.posts-table');
 let postListDiv, titleDiv, stateDiv, actionsDiv, deleteLink, editLink;
 
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
+		db.collection('users')
+			.where('email', '==', user.email)
+			.get()
+			.then((querySnapshot) => {
+				querySnapshot.forEach((doc) => {
+					totalEntries.innerHTML = doc.data().noOfEntries;
+				});
+			})
+			.catch((error) => {
+				console.log('Error getting documents: ', error);
+			});
 		db.collection('posts')
 			.where('author', '==', user.email)
 			.get()
