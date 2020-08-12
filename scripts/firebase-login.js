@@ -15,28 +15,8 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
 		});
 });
 
-// fb authentication
-document.querySelector('#fbAuth').addEventListener('click', (e) => {
-	var fbProvider = new firebase.auth.FacebookAuthProvider();
-	firebase
-		.auth()
-		.signInWithPopup(fbProvider)
-		.then((result) => {
-			console.log(result);
-			// window.location.href = '../pages/blog.html';
-		})
-		.catch((error) => {
-			console.log(error);
-		});
-});
-
-// twitter authentication
-document.querySelector('#twitterAuth').addEventListener('click', (e) => {
-	e.preventDefault();
-});
-
 // google authentication
-document.querySelector('#googleAuth').addEventListener('click', (e) => {
+document.querySelector('.login-with').addEventListener('click', (e) => {
 	var googleProvider = new firebase.auth.GoogleAuthProvider();
 	firebase
 		.auth()
@@ -50,6 +30,7 @@ document.querySelector('#googleAuth').addEventListener('click', (e) => {
 						lastname: result.user.displayName.split(' ')[1],
 						email: result.user.email,
 						img: result.user.photoURL,
+						level: 2,
 						noOfEntries: 1,
 					})
 					.then(() => {
@@ -79,6 +60,16 @@ document.querySelector('#googleAuth').addEventListener('click', (e) => {
 // check auth state
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
-		window.location.href = '../pages/blog.html';
+		docRef = db.collection('users').doc(user.uid);
+		docRef
+			.get()
+			.then((doc) => {
+				if (doc.exists) {
+					window.location.href = '../pages/blog.html';
+				}
+			})
+			.catch((error) => {
+				console.log('Error getting document:', error);
+			});
 	}
 });
