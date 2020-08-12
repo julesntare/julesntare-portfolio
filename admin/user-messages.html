@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification settings | Jules NTARE</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <title>Messages List | Admin</title>
+    <link rel="stylesheet" href="../../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,17 +22,17 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./projects.html">projects</a></li>
-                    <li><a href="./services.html">services</a></li>
-                    <li><a href="./contact.html">contact me</a></li>
-                    <li><a href="./about.html">about me</a></li>
-                    <li class="active"><a href="./blog.html">blog</a></li>
-                    <li id="login-box"><a href="./login.html" class="login-link">Login</a></li>
+                    <li><a href="../pages/projects.html">projects</a></li>
+                    <li><a href="../pages/services.html">services</a></li>
+                    <li><a href="../pages/contact.html">contact me</a></li>
+                    <li><a href="../pages/about.html">about me</a></li>
+                    <li class="active"><a href="../pages/blog.html">blog</a></li>
+                    <li id="login-box"><a href="../pages/login.html" class="login-link">Login</a></li>
                     <div class="avatar">
                         <span id="profile-avatar"></span>
                         <ul class="menu">
-                            <li><a href="./new-post.html">Dashboard</a></li>
-                            <li><a href="./user-profile-settings.html">Settings</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Settings</a></li>
                             <li id="logout"><a href="#">Logout</a></li>
                         </ul>
                     </div>
@@ -48,15 +48,15 @@
     <section>
         <div class="add-post-container">
             <div class="top-intro">
-                <h1>Settings for <span id="account-name"></span></h1>
+                <h1>Settings for @Admin</h1>
             </div>
             <div class="settings-container">
                 <div class="user-sidebar">
                     <ul>
-                        <li><a href="./user-posts.html">Dashboard</a></li>
-                        <li><a href="./user-profile-settings.html">Profile</a></li>
-                        <li class="active"><a href="./user-notifications.html">Notifications</a></li>
-                        <li><a href="./user-account.html">Account</a></li>
+                        <li><a href="./index.html">Dashboard</a></li>
+                        <li><a href="./user-list.html">Users</a></li>
+                        <li><a href="./user-posts.html">Posts</a></li>
+                        <li class="active"><a href="./user-messages.html">Messages</a></li>
                     </ul>
                     <div class="toggle-profile-menu" onclick="toggleProfile(this)">
                         <div class="bar1"></div>
@@ -65,18 +65,11 @@
                     </div>
                 </div>
                 <div>
-                    <div class="post-contents-container notifications">
-                        <h2>Email Notifications Settings</h2>
-                        <div><input type="checkbox" checked><label for="">Send me weekly newsletter emails</label></div>
-                        <div><input type="checkbox" checked><label for="">Send me an email when someone replies to me in
-                                a comment thread</label></div>
-                        <div><input type="checkbox" checked><label for="">Send me an email when someone mentions
-                                me</label></div>
-                        <div><input type="checkbox" checked><label for="">Send me occasional reminders that I have
-                                unread notifications</label></div>
-                        <div><input type="checkbox" checked><label for="">Notify me when someone reach me</label></div>
-                        <div class="actions">
-                            <button>save</button>
+                    <div class="post-contents-container user-posts">
+                        <div class="posts-table">
+                            <div class="post-title">
+                                <h1>Messages</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,12 +84,13 @@
                 <div>
                     <p>Have a project you'd like to discuss</p>
                 </div>
-                <div><a href="./contact.html"><button>Let's connect</button></a></div>
+                <div><a href="../contact.html"><button>Let's connect</button></a></div>
             </div>
             <div class="right-side">
                 <ul class="social-links">
                     <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
-                                src="../assets/images/social-icons/fb.jpg" alt="facebook"></a> <span>julesntare</span>
+                                src="../assets/images/social-icons/fb.jpg" alt="facebook"></a>
+                        <span>julesntare</span>
                     </li>
                     <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
                                 src="../assets/images/social-icons/twitter.png" alt="twitter"></a>
@@ -113,7 +107,8 @@
                 </ul>
             </div>
         </div>
-        <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
+        <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div>
+            by
             Jules NTARE. All rights reserved.</div>
     </footer>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -121,7 +116,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/userProfile.js"></script>
+    <script src="../scripts/admin/userMsg.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
