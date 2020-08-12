@@ -87,6 +87,7 @@ document.querySelector('#googleAuth').addEventListener('click', (e) => {
 						lastname: result.user.displayName.split(' ')[1],
 						email: result.user.email,
 						img: result.user.photoURL,
+						level: 2,
 						noOfEntries: firebase.firestore.FieldValue.increment(1),
 					})
 					.then(() => {
@@ -116,6 +117,16 @@ document.querySelector('#googleAuth').addEventListener('click', (e) => {
 // check auth state
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
-		window.location.href = '../pages/blog.html';
+		docRef = db.collection('users').doc(user.uid);
+		docRef
+			.get()
+			.then((doc) => {
+				if (doc.exists) {
+					window.location.href = '../pages/blog.html';
+				}
+			})
+			.catch((error) => {
+				console.log('Error getting document:', error);
+			});
 	}
 });
