@@ -1,8 +1,8 @@
 let blogContainer = document.querySelector('.blog-container');
 
 init = async () => {
-	let docRef = await db.collection('posts').get();
-	docRef.docs.map((doc) => {
+	let docRef = await db.collection('posts').where('state', '==', 'published').get();
+	docRef.docs.reverse().map((doc) => {
 		addPost(doc.id, doc.data());
 	});
 };
