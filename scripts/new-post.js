@@ -39,6 +39,7 @@ publish.addEventListener('click', (e) => {
 					'created-at': new Date(),
 					imageUrl: downloadURL,
 				});
+				window.location.href = './blog.html';
 			}
 		});
 	} else {
