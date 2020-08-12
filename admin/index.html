@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Jules NTARE</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <title>New-Post | Admin</title>
+    <link rel="stylesheet" href="../../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -21,17 +22,17 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./projects.html">projects</a></li>
-                    <li><a href="./services.html">services</a></li>
-                    <li><a href="./contact.html">contact me</a></li>
-                    <li><a href="./about.html">about me</a></li>
-                    <li class="active"><a href="./blog.html">blog</a></li>
-                    <li id="login-box"><a href="./login.html" class="login-link">Login</a></li>
+                    <li><a href="../pages/projects.html">projects</a></li>
+                    <li><a href="../pages/services.html">services</a></li>
+                    <li><a href="../pages/contact.html">contact me</a></li>
+                    <li><a href="../pages/about.html">about me</a></li>
+                    <li class="active"><a href="../pages/blog.html">blog</a></li>
+                    <li id="login-box"><a href="../pages/login.html" class="login-link">Login</a></li>
                     <div class="avatar">
-                        <span id="profile-avatar">u</span>
+                        <span id="profile-avatar"></span>
                         <ul class="menu">
-                            <li><a href="./new-post.html">Dashboard</a></li>
-                            <li><a href="./user-profile-settings.html">Settings</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Settings</a></li>
                             <li id="logout"><a href="#">Logout</a></li>
                         </ul>
                     </div>
@@ -45,27 +46,41 @@
         </div>
     </header>
     <section>
-        <div class="contact-overlay-bg blog-bg">
-            <div class="overlay-contents">
-                <div>
-                    <h1>Blog</h1>
+        <div class="add-post-container">
+            <div class="top-intro">
+                <h1>Settings for @Admin</h1>
+            </div>
+            <div class="settings-container">
+                <div class="user-sidebar">
+                    <ul>
+                        <li class="active"><a href="./index.html">Dashboard</a></li>
+                        <li><a href="./user-list.html">Users</a></li>
+                        <li><a href="./user-posts.html">Posts</a></li>
+                        <li><a href="./user-messages.html">Messages</a></li>
+                    </ul>
+                    <div class="toggle-profile-menu" onclick="toggleProfile(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
                 </div>
                 <div>
-                    <p>I try to publish some articles mainly about tech.
-                    </p>
+                    <div class="post-contents-container user-posts">
+                        <div class="cards">
+                            <div>
+                                <span id="total-posts"></span>
+                                <span>Total Posts</span>
+                            </div>
+                            <div>
+                                <span id="total-users"></span>
+                                <span>Total Users</span></div>
+                            <div>
+                                <span id="total-msgs"></span>
+                                <span>Total Messages</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- my blog section -->
-        <div class="sections services-container">
-            <div class="blog-container">
-            </div>
-            <div class="blog-buttons">
-                <div class="view-more"><button>Previous</button></div>
-                <div class="view-more"><button>Next</button></div>
-            </div>
-        </div>
     </section>
     <footer>
         <div class="upper-footer">
@@ -76,12 +91,13 @@
                 <div>
                     <p>Have a project you'd like to discuss</p>
                 </div>
-                <div><a href="./contact.html"><button>Let's connect</button></a></div>
+                <div><a href="../contact.html"><button>Let's connect</button></a></div>
             </div>
             <div class="right-side">
                 <ul class="social-links">
                     <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
-                                src="../assets/images/social-icons/fb.jpg" alt="facebook"></a> <span>julesntare</span>
+                                src="../assets/images/social-icons/fb.jpg" alt="facebook"></a>
+                        <span>julesntare</span>
                     </li>
                     <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
                                 src="../assets/images/social-icons/twitter.png" alt="twitter"></a>
@@ -98,7 +114,8 @@
                 </ul>
             </div>
         </div>
-        <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
+        <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div>
+            by
             Jules NTARE. All rights reserved.</div>
     </footer>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -106,7 +123,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/blog.js"></script>
+    <script src="../scripts/admin/dashboard.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
