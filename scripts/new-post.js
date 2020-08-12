@@ -20,6 +20,7 @@ fileUpload.addEventListener('change', (e) => {
 // check auth state
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
+		author = user.email;
 		let docRef = db.collection('users').doc(user.uid);
 		docRef
 			.get()
