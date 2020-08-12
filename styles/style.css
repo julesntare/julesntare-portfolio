@@ -216,14 +216,11 @@ section .project-bg {
 	margin: 0 auto;
 	text-align: center;
 }
-.overlay-contents h1 {
-	font-size: 4em;
-}
 .overlay-contents p {
 	width: fit-content;
 	height: fit-content;
 	line-height: 30px;
-	font-size: 1.15em;
+	font-size: 1.55em;
 	font-weight: 600;
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 99.99%, rgba(255, 255, 255, 0) 100%);
 }
@@ -311,11 +308,12 @@ button:hover {
 	text-align: center;
 }
 .overlay-contents h1 {
-	font-size: 4em;
+	font-size: 5em;
+	font-family: sans-serif;
 }
 .overlay-contents p {
 	line-height: 30px;
-	font-size: 1.15em;
+	font-size: 1.55em;
 	font-weight: 600;
 	box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.9);
 }
