@@ -17,11 +17,27 @@ fileUpload.addEventListener('change', (e) => {
 	imageName.innerHTML = e.target.files[0].name;
 });
 
+// check auth state
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
-		author = user.email;
+		let docRef = db.collection('users').doc(user.uid);
+		docRef
+			.get()
+			.then((doc) => {
+				if (doc.exists && doc.data().level == 2) {
+					return true;
+				}
+				window.location.href = '../pages/blog.html';
+			})
+			.catch((error) => {
+				console.log('Error getting document:', error);
+			});
+	} else {
+		window.location.href = '../pages/blog.html';
 	}
 });
+
+// publish post
 publish.addEventListener('click', (e) => {
 	if (postTitle != '' && postContents != '' && fileUpload.files.length > 0) {
 		let downloadURL;
@@ -30,14 +46,52 @@ publish.addEventListener('click', (e) => {
 		uploadImage.on('state_changed', async (snapshot) => {
 			if (snapshot.bytesTransferred == snapshot.totalBytes) {
 				downloadURL = await snapshot.ref.getDownloadURL();
-				db.collection('posts').add({
-					title: postTitle.value,
-					author: author,
-					contents: postContents.value,
-					'created-at': new Date(),
-					imageUrl: downloadURL,
-				});
-				window.location.href = './blog.html';
+				db.collection('posts')
+					.add({
+						title: postTitle.value,
+						author: author,
+						contents: postContents.value,
+						state: 'published',
+						'created-at': new Date(),
+						imageUrl: downloadURL,
+					})
+					.then((doc) => {
+						window.location.href = './blog.html';
+					})
+					.catch((err) => {
+						console.log(err);
+					});
+			}
+		});
+	} else {
+		e.preventDefault();
+	}
+});
+
+// draft post
+publish.addEventListener('click', (e) => {
+	if (postTitle != '' && postContents != '' && fileUpload.files.length > 0) {
+		let downloadURL;
+		storageRef = storage.ref('images/' + imageName.innerHTML);
+		uploadImage = storageRef.put(fileImage);
+		uploadImage.on('state_changed', async (snapshot) => {
+			if (snapshot.bytesTransferred == snapshot.totalBytes) {
+				downloadURL = await snapshot.ref.getDownloadURL();
+				db.collection('posts')
+					.add({
+						title: postTitle.value,
+						author: author,
+						contents: postContents.value,
+						state: 'draft',
+						'created-at': new Date(),
+						imageUrl: downloadURL,
+					})
+					.then((doc) => {
+						window.location.href = './blog.html';
+					})
+					.catch((err) => {
+						console.log(err);
+					});
 			}
 		});
 	} else {
