@@ -8,6 +8,8 @@ html {
 	font-size: 100%;
 }
 body {
+	width: 100%;
+	height: 100%;
 	background-color: #0e172d;
 }
 h1,
@@ -51,7 +53,7 @@ header {
 }
 header .at-bottom {
 	width: 90%;
-	height: inherit;
+	min-height: 100%;
 	margin-bottom: 20px;
 	display: flex;
 }
@@ -64,7 +66,9 @@ header .at-bottom {
 	letter-spacing: 2px;
 }
 .brand-name a {
-	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 	height: fit-content;
 	color: #fff;
 }
@@ -75,12 +79,10 @@ header .at-bottom {
 	font-family: 'Barlow', sans-serif;
 }
 .bottom-underline {
-	width: 60px;
+	width: 70px;
 	height: 10px;
 	background-color: #fff;
 	border-radius: 1000px;
-	position: relative;
-	left: 55px;
 }
 nav {
 	width: 70%;
@@ -90,7 +92,7 @@ nav {
 nav ul {
 	width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: flex-end;
 	flex-wrap: wrap;
 }
@@ -182,19 +184,25 @@ section .project-bg {
 	background-size: 100% 100%;
 }
 .overlay-contents-box {
-	width: 80%;
+	width: 100%;
 	min-height: 100%;
-	margin: 10px 10px 0 0;
+	margin: 0 auto;
 	color: #fff;
 	position: relative;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items: center;
 	flex-wrap: wrap;
+}
+.overlay-contents-box > div {
+	width: 38%;
+	min-height: 100px;
 }
 
 /* styles for overlay contents for pages excluding landing page*/
 .overlay-contents {
 	width: 100%;
+	min-height: 100%;
 	color: #fff;
 	margin: 0 auto;
 	display: flex;
@@ -207,7 +215,7 @@ section .project-bg {
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
-	width: 50%;
+	width: 55%;
 	min-height: 298px;
 	text-align: center;
 	background: url('../assets/images/overlay-bg.svg') center;
@@ -224,14 +232,16 @@ section .project-bg {
 .overlay-box1 {
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 99.99%, rgba(255, 255, 255, 0) 100%);
 	border-radius: 80px;
-	width: 400px;
-	height: 300px;
-	padding: 30px;
+	min-height: 300px;
+	padding: 20px;
 	border-radius: 40px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	margin-top: 15px;
+}
+.overlay-box1 > * {
+	margin-bottom: 10px;
 }
 .overlay-box1 h3 {
 	font-size: 30px;
@@ -240,10 +250,19 @@ section .project-bg {
 	font-size: 20px;
 	line-height: 30px;
 }
+.overlay-box1 a {
+	align-self: flex-end;
+	margin: 10px;
+}
+.overlay-box1 .view-more button {
+	width: 150px;
+}
 .social-links {
 	display: flex;
-	justify-content: space-between;
-	width: 300px;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
 }
 .social-links img {
 	width: 40px;
@@ -278,7 +297,7 @@ button:hover {
 .overlay-box3 {
 	width: 400px;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-end;
 }
 .overlay-box3 img {
@@ -312,27 +331,39 @@ button:hover {
 .project-container {
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
+	height: 100%;
 	margin-top: 30px;
 	flex-wrap: wrap;
 }
+.project-container > div {
+	width: 48%;
+	min-height: 450px;
+}
 .project-thumb {
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(30, 25, 25, 0) 100%);
-	width: 500px;
-	height: 450px;
 }
 .project-thumb img {
-	width: 500px;
+	width: 100%;
 	height: 400px;
-	margin: 60px 0 0 60px;
+	margin: 30px 0 0 30px;
 	box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.25);
 }
 .project-details {
 	background: linear-gradient(180deg, rgba(29, 37, 54, 0.29) 30.21%, rgba(74, 72, 72, 0) 100%);
-	width: 460px;
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+.marg-bottom .mg-bt-btn {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.marg-bottom .mg-bt-btn button {
+	width: 150px;
+	margin: 10px 0;
 }
 .project-details div {
 	flex: 2;
@@ -362,8 +393,8 @@ button:hover {
 }
 .project-details div.tech-container {
 	display: flex;
-	justify-content: space-between;
-	width: 60%;
+	justify-content: space-around;
+	width: 100%;
 }
 .tech-container img {
 	width: 55px;
@@ -383,7 +414,7 @@ button:hover {
 }
 .service-container > div {
 	background: rgba(71, 71, 71, 0.14);
-	width: 450px;
+	width: 48%;
 	min-height: 400px;
 	display: flex;
 	flex-direction: column;
@@ -408,8 +439,12 @@ button:hover {
 	justify-content: center;
 	align-items: center;
 }
+.services > div:nth-child(3) {
+	min-height: 65px;
+	text-align: center;
+}
 .services > div:last-child {
-	margin: 30px 25px;
+	margin: 30px 20px;
 	line-height: 35px;
 	font-size: 20px;
 	text-align: center;
@@ -420,6 +455,7 @@ button:hover {
 	height: 50px;
 }
 .view-more {
+	margin: 0 auto;
 	margin-top: 40px;
 	text-align: center;
 }
@@ -492,7 +528,7 @@ footer {
 	align-items: center;
 }
 .upper-footer .left-side {
-	width: 700px;
+	width: 70%;
 }
 .upper-footer .left-side div {
 	width: 400px;
@@ -517,7 +553,7 @@ footer {
 	background: none;
 }
 .upper-footer .right-side {
-	width: 400px;
+	width: 30%;
 	align-items: flex-start;
 }
 .upper-footer .right-side ul {
@@ -532,8 +568,8 @@ footer {
 }
 .upper-footer .right-side ul li span {
 	flex: 3;
-	margin-left: 20px;
-	font-size: 20px;
+	margin-left: 10px;
+	font-size: 18px;
 }
 .lower-footer {
 	width: 100%;
@@ -554,12 +590,7 @@ footer {
 .lower-footer div img {
 	width: 100%;
 }
-.blog-buttons {
-	width: 50%;
-	display: flex;
-	justify-content: space-around;
-	margin: 0 auto;
-}
+
 /* profile menu */
 .avatar {
 	width: 40px;
@@ -636,7 +667,7 @@ footer {
 }
 
 /* media queries */
-@media (max-width: 740px) {
+@media (max-width: 768px) {
 	header .at-bottom {
 		width: 100%;
 		position: relative;
@@ -680,6 +711,8 @@ footer {
 		margin: 0 auto;
 	}
 	.overlay-box1 {
+		width: 100%;
+		margin: 0;
 		align-self: center;
 	}
 	.overlay-box2 {
@@ -688,8 +721,11 @@ footer {
 		bottom: 0;
 		right: 0;
 	}
+	.overlay-contents-box > div {
+		width: 90%;
+		margin-top: 10px;
+	}
 	.overlay-box3 {
-		width: 100%;
 		height: 300px;
 		justify-content: center;
 		align-items: flex-end;
@@ -698,9 +734,19 @@ footer {
 		width: 90%;
 	}
 	.project-thumb,
+	.project-details,
 	.service-container,
 	.blog-container {
 		width: 100%;
+	}
+	.overlay-contents h1 {
+		font-size: 3em;
+	}
+	.project-container > div {
+		width: 100%;
+	}
+	.mg-bt-btn button {
+		margin: 10px 0;
 	}
 	.project-thumb img {
 		width: 100%;
@@ -709,6 +755,9 @@ footer {
 	}
 	.overlay-contents div:nth-child(2) {
 		width: 80%;
+	}
+	.overlay-contents > div {
+		width: 95%;
 	}
 	.service-container-expanded {
 		flex-direction: column;
@@ -728,5 +777,35 @@ footer {
 	}
 	.service-container-expanded > div * {
 		text-align: center;
+	}
+	.service-container > div,
+	.social-links {
+		width: 100%;
+	}
+	.upper-footer .left-side,
+	.upper-footer .right-side,
+	.upper-footer .left-side div {
+		width: 100%;
+	}
+	.upper-footer .left-side,
+	.upper-footer .right-side {
+		margin: 10px;
+	}
+	.lower-footer {
+		text-align: center;
+	}
+	.lower-footer div {
+		margin: 0;
+	}
+	.menu {
+		width: 200px;
+		left: -100px;
+		right: 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.overlay-contents > div {
+		background: linear-gradient(180deg, rgba(1, 1, 1, 0.62) 1.95%, rgba(34, 34, 34, 0.69) 102.62%);
 	}
 }

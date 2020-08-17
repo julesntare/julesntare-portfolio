@@ -38,58 +38,60 @@
             </nav>
         </div>
     </header>
-    <div class="error-msg"></div>
-    <div class="login-container">
-        <div class="first-side">
-            <div class="content-center">
-                <div>
-                    <p>Welcome to</p>
-                </div>
-                <div>
-                    <h1>Jules Blog</h1>
-                </div>
-                <div>
-                    <p>I post different articles about tech trends and tricks</p>
+    <div class="login-signup-container">
+        <div class="login-container">
+            <div class="first-side">
+                <div class="content-center">
+                    <div>
+                        <p>Welcome to</p>
+                    </div>
+                    <div>
+                        <h1>Jules Blog</h1>
+                    </div>
+                    <div>
+                        <p>I post different articles about tech trends and tricks</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="second-side">
-            <div class="form-container">
-                <div class="login-text">
-                    <p>LOGIN</p>
-                </div>
-                <div class="login-with">
-                    <img src="../assets//images/social-icons/google-logo.png" alt=""> <span>Sign In with Google</span>
-                </div>
-                <div class="or">OR</div>
-                <div>
-                    <form action="#" id="loginForm">
-                        <div class="form-contents">
-                            <div class="input-box input-box1">
-                                <i class="fa fa-user fa-2x" aria-hidden="true"></i><input type="email" id="email"
-                                    placeholder="Email" required>
+            <div class="second-side">
+                <div class="form-container">
+                    <div class="login-text">
+                        <p>LOGIN</p>
+                    </div>
+                    <div class="error-msg"></div>
+                    <div class="login-with">
+                        <img src="../assets//images/social-icons/google-logo.png" alt=""> <span>Sign In with
+                            Google</span>
+                    </div>
+                    <div class="or">OR</div>
+                    <div>
+                        <form action="#" id="loginForm">
+                            <div class="form-contents">
+                                <div class="input-box input-box1">
+                                    <i class="fa fa-user fa-2x" aria-hidden="true"></i><input type="email" id="email"
+                                        placeholder="Email" required>
+                                </div>
+                                <div class="input-box input-box1">
+                                    <i class="fa fa-lock fa-2x" aria-hidden="true"></i><input type="password"
+                                        id="password" placeholder="PASSWORD" required></div>
+                                <div class="input-box view-more send-button">
+                                    <button type="submit">LOGIN</button>
+                                </div>
+                                <div class="input-box input-check">
+                                    <input class="remember-box" type="checkbox" name="" id=""> <span>Remember Me</span>
+                                </div>
+                                <div class="bottom-text">
+                                    <span>New Here?</span><a href="./signup.html">Sign Up</a>
+                                </div>
                             </div>
-                            <div class="input-box input-box1">
-                                <i class="fa fa-lock fa-2x" aria-hidden="true"></i><input type="password" id="password"
-                                    placeholder="PASSWORD" required></div>
-                            <div class="input-box view-more send-button">
-                                <button type="submit">LOGIN</button>
-                            </div>
-                            <div class="input-box input-check">
-                                <input class="remember-box" type="checkbox" name="" id=""> <span>Remember Me</span>
-                            </div>
-                            <div class="bottom-text">
-                                <span>New Here?</span><a href="./signup.html">Sign Up</a>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <footer class="login-footer">
-        <div class="lower-footer">&copy 2020 made with <div><img src="../assets/images/made-love.png" alt=""></div> by
-            Jules NTARE. All rights reserved.</div>
+        <div class="lower-footer">&copy 2020 made by Jules NTARE. All rights reserved.</div>
     </footer>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
