@@ -73,7 +73,7 @@ const saveUser = (fname, lname, email, pswd) => {
 };
 
 // google authentication
-document.querySelector('#googleAuth').addEventListener('click', (e) => {
+document.querySelector('.login-with').addEventListener('click', (e) => {
 	var googleProvider = new firebase.auth.GoogleAuthProvider();
 	firebase
 		.auth()
