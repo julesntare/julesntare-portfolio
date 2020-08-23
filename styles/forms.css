@@ -23,7 +23,7 @@
 	margin: 0 0 10px 10px;
 }
 .form-group-1 {
-	height: 220px;
+	min-height: 120px;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
