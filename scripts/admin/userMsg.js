@@ -38,8 +38,6 @@ const getPost = (id, data) => {
 	deleteLink.setAttribute('href', '#');
 	deleteLink.setAttribute('id', 'delete');
 	deleteLink.innerHTML = 'Delete';
-	editLink.setAttribute('href', './edit-post.html?postId=' + id);
-	editLink.innerHTML = 'Edit';
 	actionsDiv.appendChild(deleteLink);
 	actionsDiv.appendChild(editLink);
 	postListDiv.appendChild(titleDiv);

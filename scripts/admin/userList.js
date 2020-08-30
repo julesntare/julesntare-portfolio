@@ -8,10 +8,10 @@ firebase.auth().onAuthStateChanged((user) => {
 			.get()
 			.then((querySnapshot) => {
 				if (querySnapshot.docs.length < 1) {
-					return (postTable.innerHTML += 'No post');
+					return (postTable.innerHTML += 'No User');
 				}
 				querySnapshot.forEach((doc) => {
-					let postList = getPost(doc.id, doc.data());
+					let postList = getUser(doc.id, doc.data());
 					postTable.appendChild(postList);
 				});
 			})
@@ -21,7 +21,7 @@ firebase.auth().onAuthStateChanged((user) => {
 	}
 });
 
-const getPost = (id, data) => {
+const getUser = (id, data) => {
 	postListDiv = document.createElement('div');
 	titleDiv = document.createElement('div');
 	stateDiv = document.createElement('div');
@@ -38,7 +38,7 @@ const getPost = (id, data) => {
 	deleteLink.setAttribute('href', '#');
 	deleteLink.setAttribute('id', 'delete');
 	deleteLink.innerHTML = 'Delete';
-	editLink.setAttribute('href', './edit-post.html?postId=' + id);
+	editLink.setAttribute('href', './edit-user.html?userId=' + id);
 	editLink.innerHTML = 'Edit';
 	actionsDiv.appendChild(deleteLink);
 	actionsDiv.appendChild(editLink);
@@ -60,7 +60,6 @@ const getPost = (id, data) => {
 	return postListDiv;
 };
 
-// check auth state
 // check auth state
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
