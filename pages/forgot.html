@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Jules NTARE</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="at-bottom">
+            <div class="brand-name">
+                <a href="../index.html">
+                    <h1>jules</h1>
+                    <div class="bottom-underline"></div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./projects.html">projects</a></li>
+                    <li><a href="./services.html">services</a></li>
+                    <li><a href="./contact.html">contact me</a></li>
+                    <li><a href="./about.html">about me</a></li>
+                    <li class="active"><a href="./blog.html">blog</a></li>
+                    <li><a href="./login.html" class="login-link">Login</a></li>
+                </ul>
+                <div class="toggle-menu" onclick="toggle(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="login-signup-container">
+        <div class="second-side">
+            <div class="form-container">
+                <div>
+                    <form action="#" id="forgotForm">
+                        <div class="form-contents">
+                            <div class="input-box f-center">
+                                <h3>Add Email to send a reset link</h3>
+                            </div>
+                            <div class="success-msg f-center"></div>
+                            <div class="input-box input-box1">
+                                <i class="fa fa-user fa-2x" aria-hidden="true"></i><input type="email" id="email"
+                                    placeholder="Email" required>
+                            </div>
+                            <div class="input-box view-more send-button">
+                                <button type="submit">Confirm</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="login-footer">
+        <div class="lower-footer">&copy 2020 made by Jules NTARE. All rights reserved.</div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
+    <script src="../scripts/firebase-config.js"></script>
+    <script src="../scripts/firebase-forgot.js"></script>
+    <script src="../scripts/scripts.js"></script>
+</body>
+
+</html>
