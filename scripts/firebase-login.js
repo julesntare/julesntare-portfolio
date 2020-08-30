@@ -33,9 +33,6 @@ document.querySelector('.login-with').addEventListener('click', (e) => {
 						level: 2,
 						noOfEntries: 1,
 					})
-					.then(() => {
-						window.location.href = '../pages/blog.html';
-					})
 					.catch((error) => {
 						console.error('Error writing document: ', error);
 					});
@@ -45,7 +42,17 @@ document.querySelector('.login-with').addEventListener('click', (e) => {
 						noOfEntries: firebase.firestore.FieldValue.increment(1),
 					})
 					.then(() => {
-						window.location.href = '../pages/blog.html';
+						db.collection('users')
+							.doc(docRef.id)
+							.get()
+							.then((doc) => {
+								if (doc.data().level == 1) {
+									window.location.href = '../admin/index.html';
+								} else {
+									window.location.href = '../pages/blog.html';
+								}
+							})
+							.catch((err) => console.log(err));
 					})
 					.catch((error) => {
 						console.error('Error writing document: ', error);
@@ -65,7 +72,11 @@ firebase.auth().onAuthStateChanged((user) => {
 			.get()
 			.then((doc) => {
 				if (doc.exists) {
-					window.location.href = '../pages/blog.html';
+					if (doc.data().level == 1) {
+						window.location.href = '../admin/index.html';
+					} else {
+						window.location.href = '../pages/blog.html';
+					}
 				}
 			})
 			.catch((error) => {

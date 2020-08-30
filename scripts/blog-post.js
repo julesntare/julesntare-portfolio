@@ -2,7 +2,6 @@ let authorContainer = document.querySelector('.author-section');
 let postContainer = document.querySelector('.post-details');
 let authorInfo = document.createElement('div');
 let postInfo = document.createElement('div');
-let postTitle = document.querySelector('#post-title');
 let createdAt = document.querySelector('#created-at');
 let postLikes = document.querySelector('.post-likes');
 let userEmail, authorData;
@@ -10,8 +9,6 @@ let userEmail, authorData;
 const getPost = async (id, data) => {
 	let d = data['created-at'].toDate();
 	d = d.toString().split(' ').slice(1, 4);
-	postTitle.innerHTML = data.title;
-	createdAt.innerHTML = `${d[1]}th ${d[0]}, ${d[2]}`;
 	let authorRef = await db.collection('users').where('email', '==', data.author).get();
 	authorRef.docs.forEach((doc) => {
 		authorData = doc.data();
@@ -67,6 +64,8 @@ const getPost = async (id, data) => {
     <h2 id="total-likes">${data.likes | 0}</h2>`;
 	postInfo.innerHTML += `<div>
 <img src="${data.imageUrl}" alt="">
+<p><i>last updated on <span id="created-at">${d[1]}th ${d[0]}, ${d[2]}</span></i></p>
+<div class="post-heading"><h1 id="post-title">${data.title}</h1></div>
 </div>`;
 	let parasContainer = document.createElement('div');
 	parasContainer.setAttribute('class', 'post-paras');
@@ -92,7 +91,6 @@ firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
 		userEmail = user.email;
 	} else {
-		alert('you have to login to continue');
 		window.location.href = './login.html';
 	}
 });
@@ -121,7 +119,7 @@ document.querySelector('#add-reply').addEventListener('submit', (e) => {
 const getReplies = (postId) => {
 	let replySection = document.querySelector('.replies-section');
 	let replyCounter = document.querySelector('#replies-counter');
-
+	let i = 0;
 	let docRef = db.collection('posts').doc(postId);
 	docRef
 		.get()
@@ -129,7 +127,6 @@ const getReplies = (postId) => {
 			if (doc.data().comments == undefined) {
 				return (replySection.innerHTML = 'No Replies');
 			}
-			replyCounter.innerHTML = `comments(${doc.data().comments.length})`;
 			doc.data()
 				.comments.reverse()
 				.forEach((comment) => {
@@ -138,6 +135,7 @@ const getReplies = (postId) => {
 						.get()
 						.then((querySnapshot) => {
 							querySnapshot.forEach((doc) => {
+								replyCounter.innerHTML = `comments(${++i})`;
 								let replyDetails = document.createElement('div');
 								replyDetails.innerHTML = `<div class="comment-user">
 										<div>
