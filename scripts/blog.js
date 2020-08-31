@@ -6,12 +6,7 @@ var end = null;
 init = async () => {
 	let docRef;
 	if (window.location.pathname.includes('pages') || window.location.pathname.includes('admin')) {
-		docRef = await db
-			.collection('posts')
-			.where('state', '==', 'published')
-			.orderBy('created-at', 'desc')
-			.limit(4)
-			.get();
+		docRef = await db.collection('posts').where('state', '==', 'published').orderBy('created-at', 'desc').get();
 	} else {
 		docRef = await db
 			.collection('posts')
