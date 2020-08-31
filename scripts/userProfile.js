@@ -14,7 +14,7 @@ firebase.auth().onAuthStateChanged((user) => {
 		docRef
 			.get()
 			.then((doc) => {
-				if (doc.exists && doc.data().level == 2) {
+				if (doc.exists) {
 					return true;
 				}
 				window.location.href = '../pages/blog.html';

@@ -25,7 +25,7 @@ firebase.auth().onAuthStateChanged((user) => {
 		docRef
 			.get()
 			.then((doc) => {
-				if (doc.exists && doc.data().level == 2) {
+				if (doc.exists) {
 					return true;
 				}
 				window.location.href = '../pages/blog.html';
@@ -57,7 +57,7 @@ publish.addEventListener('click', (e) => {
 						imageUrl: downloadURL,
 					})
 					.then((doc) => {
-						window.location.href = './blog.html';
+						window.location.href = '../pages/blog.html';
 					})
 					.catch((err) => {
 						console.log(err);
@@ -70,7 +70,7 @@ publish.addEventListener('click', (e) => {
 });
 
 // draft post
-publish.addEventListener('click', (e) => {
+saveDraft.addEventListener('click', (e) => {
 	if (postTitle != '' && postContents != '' && fileUpload.files.length > 0) {
 		let downloadURL;
 		storageRef = storage.ref('images/' + imageName.innerHTML);
@@ -88,7 +88,7 @@ publish.addEventListener('click', (e) => {
 						imageUrl: downloadURL,
 					})
 					.then((doc) => {
-						window.location.href = './blog.html';
+						window.location.href = '../pages/blog.html';
 					})
 					.catch((err) => {
 						console.log(err);

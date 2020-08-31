@@ -6,7 +6,7 @@ let profileImg = document.querySelector('#profile-img');
 let bio = document.querySelector('#bio');
 let myLocation = document.querySelector('#my-location');
 let submitUpdate = document.querySelector('#submit-update');
-let docRef;
+let docRef, currEmail;
 
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
@@ -16,6 +16,7 @@ firebase.auth().onAuthStateChanged((user) => {
 			.then((doc) => {
 				if (doc.exists) {
 					email.value = user.email;
+					currEmail = user.email;
 					fname.value = doc.data().firstname != undefined ? doc.data().firstname : null;
 					lname.value = doc.data().lastname != undefined ? doc.data().lastname : null;
 					currentProfile.src = doc.data().img != undefined ? doc.data().img : '';
@@ -47,10 +48,15 @@ submitUpdate.addEventListener('click', (e) => {
 	} else {
 		updateData();
 	}
-	console.log(downloadUrl);
 });
 
 const updateData = (url = null) => {
+	if (email.value != currEmail) {
+		let userData = firebase.auth().currentUser;
+		userData.updateEmail(email.value).catch((error) => {
+			console.log(error);
+		});
+	}
 	docRef
 		.update({
 			email: email.value,
@@ -58,10 +64,10 @@ const updateData = (url = null) => {
 			lastname: lname.value,
 			bio: bio.value,
 			location: myLocation.value,
-			img: url,
+			img: url != null ? url : currentProfile.src,
 		})
 		.then(() => {
-			window.location.reload();
+			// window.location.reload();
 		})
 		.catch((error) => {
 			console.error('Error updating document: ', error);

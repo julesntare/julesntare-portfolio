@@ -6,7 +6,8 @@
 }
 .blog-container > div {
 	background: rgba(68, 68, 68, 0.14);
-	width: 48%;
+	box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.6);
+	width: 46%;
 	min-height: 480px;
 	display: flex;
 	flex-direction: column;
@@ -67,12 +68,12 @@
 	flex-wrap: wrap;
 	width: 100%;
 	min-height: 100%;
-	margin-top: 20px;
+	margin-top: 0;
 }
 .post-section > div:nth-child(1) {
 	width: 20%;
 	min-height: 100%;
-	margin: 10px 0 0 20px;
+	margin: 30px 0 0 20px;
 	text-align: center;
 }
 .post-section > div:nth-child(1) div {
@@ -172,6 +173,7 @@
 .post-section > div:nth-child(2) {
 	width: 65%;
 	margin: 0 auto;
+	margin-top: 30px;
 }
 .post-details,
 .comment-section,
@@ -192,6 +194,18 @@
 .post-paras p {
 	font-size: 1.25em;
 	margin-bottom: 20px;
+}
+.post-heading {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	font-size: 36px;
+	min-height: 100%;
+	padding: 0 10px;
+}
+.post-heading h1 {
+	text-align: center;
 }
 .comment-section {
 	min-height: 100px;

@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New-Post | Admin</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <title>Users List | Admin</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../styles/forms.css">
     <link rel="stylesheet" href="../styles/blog-posts.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
@@ -46,33 +47,50 @@
             </nav>
         </div>
     </header>
-    <div class="add-post-container">
-        <div class="top-intro">
-            <div>
-                <h2>New Post</h2>
-                <button id="close-page">Close</button>
+    <section>
+        <div class="add-post-container">
+            <div class="top-intro">
+                <h1>Settings for @Admin</h1>
             </div>
-            <div>
-                <a href="#" class="active">Edit</a>
-                <a href="#">Preview</a>
+            <div class="settings-container">
+                <div class="user-sidebar">
+                    <ul>
+                        <li><a href="./index.html">Dashboard</a></li>
+                        <li class="active"><a href="./user-list.html">Users</a></li>
+                        <li><a href="./user-posts.html">Posts</a></li>
+                        <li><a href="./user-messages.html">Messages</a></li>
+                    </ul>
+                    <div class="toggle-profile-menu" onclick="toggleProfile(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="post-contents-container user-posts">
+                        <div>
+                            <div class="success-msg"></div>
+                            <div class="error-msg"></div>
+                            <form action="">
+                                <div class="post-contents-container">
+                                    <div><label for="">First Name</label><input type="text" id="fname" required>
+                                    </div>
+                                    <div><label for="">Last Name</label><input type="text" id="lname" required></div>
+                                    <div><label for="">Email</label><input type="email" id="email" required></div>
+                                    <div><label for="">Password</label><input type="password" id="pass" required>
+                                    </div>
+                                    <div><label for="">Confirm Password</label><input type="password" id="cpass"
+                                            required></div>
+                                </div>
+                                <div class="actions">
+                                    <button id="submit-update">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="post-contents-container">
-            <div>
-                <label for="file-upload" class="custom-file-upload">
-                    Add Cover Image
-                </label>
-                <input type="file" name="" accept="image/*" capture="camera" id="file-upload">
-                <span id="image-name"></span>
-            </div> <input type="text" name="" id="post-title" placeholder="New Post title here...">
-            <textarea name="" id="post-contents" cols="30" rows="10"
-                placeholder="Write your post content here..."></textarea>
-        </div>
-        <div class="actions">
-            <button id="publish">Publish</button>
-            <button id="save-draft">save draft</button>
-        </div>
-    </div>
+    </section>
     <footer>
         <div class="upper-footer">
             <div class="left-side">
@@ -82,15 +100,16 @@
                 <div>
                     <p>Have a project you'd like to discuss</p>
                 </div>
-                <div><a href="./contact.html"><button>Let's connect</button></a></div>
+                <div><a href="../contact.html"><button>Let's connect</button></a></div>
             </div>
             <div class="right-side">
                 <ul class="social-links">
                     <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
-                                src="../assets/images/social-icons/fb.jpg" alt="facebook"></a> <span>julesntare</span>
+                                src="../assets/images/social-icons/fb.jpg" alt="facebook"></a>
+                        <span>julesntare</span>
                     </li>
                     <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
-                                src="../assets/images/social-icons/twitter.png" alt="twitter"></a>
+                                src="../../assets/images/social-icons/twitter.png" alt="twitter"></a>
                         <span>@julesntare</span></li>
                     <li><a href="mailto:julesntare@gmail.com" target="_blank"><img
                                 src="../assets/images/social-icons/email.jpg" alt="email"></a>
@@ -111,7 +130,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/new-post.js"></script>
+    <script src="../scripts/admin/addUser.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 

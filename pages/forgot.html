@@ -39,52 +39,24 @@
         </div>
     </header>
     <div class="login-signup-container">
-        <div class="login-container">
-            <div class="first-side">
-                <div class="content-center">
-                    <div>
-                        <p>Welcome to</p>
-                    </div>
-                    <div>
-                        <h1>Jules Blog</h1>
-                    </div>
-                    <div>
-                        <p>I post different articles about tech trends and tricks</p>
-                    </div>
-                </div>
-            </div>
-            <div class="second-side">
-                <div class="form-container">
-                    <div class="login-text">
-                        <p>LOGIN</p>
-                    </div>
-                    <div class="error-msg"></div>
-                    <div class="login-with">
-                        <img src="../assets//images/social-icons/google-logo.png" alt=""> <span>Sign In with
-                            Google</span>
-                    </div>
-                    <div class="or">OR</div>
-                    <div>
-                        <form action="#" id="loginForm">
-                            <div class="form-contents">
-                                <div class="input-box input-box1">
-                                    <i class="fa fa-user fa-2x" aria-hidden="true"></i><input type="email" id="email"
-                                        placeholder="Email" required>
-                                </div>
-                                <div class="input-box input-box1">
-                                    <i class="fa fa-lock fa-2x" aria-hidden="true"></i><input type="password"
-                                        id="password" placeholder="PASSWORD" required></div>
-                                <div class="input-box view-more send-button">
-                                    <button type="submit">LOGIN</button>
-                                </div>
-                                <div class="input-box input-check"><a href="./forgot.html">Forgot Password?</a>
-                                </div>
-                                <div class="bottom-text">
-                                    <span>New Here?</span><a href="./signup.html">Sign Up</a>
-                                </div>
+        <div class="second-side">
+            <div class="form-container">
+                <div>
+                    <form action="#" id="forgotForm">
+                        <div class="form-contents">
+                            <div class="input-box f-center">
+                                <h3>Add Email to send a reset link</h3>
                             </div>
-                        </form>
-                    </div>
+                            <div class="success-msg f-center"></div>
+                            <div class="input-box input-box1">
+                                <i class="fa fa-user fa-2x" aria-hidden="true"></i><input type="email" id="email"
+                                    placeholder="Email" required>
+                            </div>
+                            <div class="input-box view-more send-button">
+                                <button type="submit">Confirm</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -97,7 +69,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/firebase-login.js"></script>
+    <script src="../scripts/firebase-forgot.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
