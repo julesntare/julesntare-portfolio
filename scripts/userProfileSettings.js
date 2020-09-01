@@ -67,7 +67,7 @@ const updateData = (url = null) => {
 			img: url != null ? url : currentProfile.src,
 		})
 		.then(() => {
-			// window.location.reload();
+			window.location.reload();
 		})
 		.catch((error) => {
 			console.error('Error updating document: ', error);
