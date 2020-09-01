@@ -34,6 +34,7 @@ function submitForm(e) {
 
 // save user to firebase
 const saveUser = (fname, lname, email, pswd) => {
+	console.log(email);
 	firebase
 		.auth()
 		.createUserWithEmailAndPassword(email, pswd)
@@ -51,7 +52,7 @@ const saveUser = (fname, lname, email, pswd) => {
 				.then(() => {
 					errorMsg.style.display = 'none';
 					successMsg.style.display = 'flex';
-					successMsg.innerHTML = 'Thank you for joining My Blog';
+					successMsg.innerHTML = 'new user registered';
 					setTimeout(() => {
 						window.location.href = './user-list.html';
 					}, 2500);
@@ -68,6 +69,7 @@ const saveUser = (fname, lname, email, pswd) => {
 
 // check auth state
 firebase.auth().onAuthStateChanged((user) => {
+	console.log(user);
 	if (user) {
 		let docRef = db.collection('users').doc(user.uid);
 		docRef
@@ -76,12 +78,12 @@ firebase.auth().onAuthStateChanged((user) => {
 				if (doc.exists && doc.data().level == 1) {
 					return true;
 				}
-				window.location.href = '../pages/blog.html';
+				// window.location.href = '../pages/blog.html';
 			})
 			.catch((error) => {
 				console.log('Error getting document:', error);
 			});
 	} else {
-		window.location.href = '../pages/blog.html';
+		// window.location.href = '../pages/blog.html';
 	}
 });

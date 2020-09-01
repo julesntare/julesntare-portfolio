@@ -30,8 +30,11 @@ const getPost = (id, data) => {
 	editLink = document.createElement('a');
 	postListDiv.setAttribute('class', 'post-lists');
 	titleDiv.setAttribute('class', 'title');
-	titleDiv.innerHTML = data.title.split(' ').splice(0, 10).join(' ');
-	stateDiv.setAttribute('class', 'state');
+	titleDiv.innerHTML = `<a href="../pages/blog-post.html?postid=${id}&title=${data.title}">${data.title
+		.split(' ')
+		.splice(0, 10)
+		.join(' ')}</a>`;
+	data.state == 'published' ? stateDiv.setAttribute('class', 'state') : stateDiv.setAttribute('class', 'state-draft');
 	stateDiv.innerHTML = data.state;
 	actionsDiv.setAttribute('class', 'actions');
 	actionsDiv.setAttribute('id', id);
