@@ -33,8 +33,7 @@
                     <div class="avatar">
                         <span id="profile-avatar"></span>
                         <ul class="menu">
-                            <li><a href="./index.html">Dashboard</a></li>
-                            <li><a href="../pages/user-profile-settings.html">Settings</a></li>
+                            <li><a href="../pages/user-profile-settings.html">Profile</a></li>
                             <li id="logout"><a href="#">Logout</a></li>
                         </ul>
                     </div>
@@ -72,15 +71,23 @@
                             <div class="success-msg"></div>
                             <div class="error-msg"></div>
                             <form action="">
+                                <h2 id="editUserName">Edit User</h2>
                                 <div class="post-contents-container">
                                     <div><label for="">First Name</label><input type="text" id="fname" required>
                                     </div>
                                     <div><label for="">Last Name</label><input type="text" id="lname" required></div>
                                     <div><label for="">Email</label><input type="email" id="email" required></div>
-                                    <div><label for="">Password</label><input type="password" id="pass" required>
+                                    <div><label for=""></label>
+                                        <div class="profile">
+                                            <img src="" id="current-profile" alt="">
+                                            <input type="file" id="profile-img">
+                                        </div>
                                     </div>
-                                    <div><label for="">Confirm Password</label><input type="password" id="cpass"
-                                            required></div>
+                                    <div><label for="">A short bio</label><textarea name="" id="bio" cols="30"
+                                            rows="10"></textarea>
+                                    </div>
+                                    <div><label for="">Location</label><input type="text" id="my-location"></div>
+                                    <div><label for="">social Links</label><input type="text"></div>
                                 </div>
                                 <div class="actions">
                                     <button id="submit-update">Save</button>
@@ -130,7 +137,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
     <script src="../scripts/firebase-config.js"></script>
-    <script src="../scripts/admin/addUser.js"></script>
+    <script src="../scripts/admin/editUser.js"></script>
     <script src="../scripts/scripts.js"></script>
 </body>
 
