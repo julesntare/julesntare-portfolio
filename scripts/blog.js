@@ -16,17 +16,21 @@ init = async () => {
 			.get();
 	}
 	docRef.docs.map((doc) => {
-		addPost(doc.id, doc.data());
+		getAllPosts(doc.id, doc.data());
 	});
 };
 
-const addPost = (id, data) => {
+const getAllPosts = (id, data) => {
 	let d = data['created-at'].toDate();
 	d = d.toString().split(' ').slice(1, 4);
 	let postContainer = `<div class="blog-posts blog-post-1">
-    <div id="post-image">
+    ${
+		data.imageUrl
+			? `<div id="post-image">
         <a href="../pages/blog-post.html?postid=${id}&title=${data.title}"><img src="${data.imageUrl}" alt=""></a>
-    </div>
+    </div>`
+			: '<br/>'
+	}
     <div id="post-title">
         <h2><a href="../pages/blog-post.html?postid=${id}&title=${data.title}">${data.title}</a></h2>
     </div>

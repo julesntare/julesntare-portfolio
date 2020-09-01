@@ -46,11 +46,7 @@ document.querySelector('.login-with').addEventListener('click', (e) => {
 							.doc(docRef.id)
 							.get()
 							.then((doc) => {
-								if (doc.data().level == 1) {
-									window.location.href = '../admin/index.html';
-								} else {
-									window.location.href = '../pages/blog.html';
-								}
+								window.location.href = '../pages/blog.html';
 							})
 							.catch((err) => console.log(err));
 					})
@@ -72,11 +68,7 @@ firebase.auth().onAuthStateChanged((user) => {
 			.get()
 			.then((doc) => {
 				if (doc.exists) {
-					if (doc.data().level == 1) {
-						window.location.href = '../admin/index.html';
-					} else {
-						window.location.href = '../pages/blog.html';
-					}
+					window.location.href = '../pages/blog.html';
 				}
 			})
 			.catch((error) => {
